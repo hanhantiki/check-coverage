@@ -114,7 +114,7 @@ function generateStatus({
       originalBranchesRate > branchesRate ||
       originalLineRate > lineRate ||
       originalMethodsRate > methodsRate ||
-      originalStatementsRate > lineRate
+      originalStatementsRate > statementsRate
     ) {
       let description = "Failure: ";
       if (originalBranchesRate > branchesRate) {
@@ -236,7 +236,6 @@ async function run() {
     const client = github.getOctokit(githubToken);
 
     const coverage = await readFile(cloverFile);
-    core.info(JSON.stringify(coverage));
     const metric = readMetric(coverage);
     let originalMetric = readMetric(coverage);
     if (fs.existsSync(originalCloverFile)) {
