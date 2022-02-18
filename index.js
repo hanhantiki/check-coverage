@@ -94,10 +94,10 @@ function generateTable({ metric, commentContext }) {
 
 function generateStatus({
   metric: {
-    lines: { lineRate },
-    statements: { statementsRate },
-    methods: { methodsRate },
-    branches: { branchesRate },
+    lines: { rate: lineRate },
+    statements: { rate: statementsRate },
+    methods: { rate: methodsRate },
+    branches: { rate: branchesRate },
   },
   targetUrl,
   statusContext,
@@ -105,37 +105,39 @@ function generateStatus({
 }) {
   if (originalMetric) {
     const {
-      lines: { originalLineRate },
-      statements: { originalStatementsRate },
-      methods: { originalMethodsRate },
-      branches: { originalBranchesRate },
+      lines: { rate: originalLineRate },
+      statements: { rate: originalStatementsRate },
+      methods: { rate: originalMethodsRate },
+      branches: { rate: originalBranchesRate },
     } = originalMetric;
+    core.info(JSON.stringify(originalMetric));
+    core.info(JSON.stringify(metric));
     if (
       originalBranchesRate > branchesRate ||
       originalLineRate > lineRate ||
       originalMethodsRate > methodsRate ||
-      originalStatementsRate > lineRate
+      originalStatementsRate > statementsRate
     ) {
       let description = "Failure: ";
       if (originalBranchesRate > branchesRate) {
-        description += `\nBranches Coverage decrease - ${
+        description += `Branches Coverage decrease - ${
           originalBranchesRate - branchesRate
-        }%`;
+        }%,`;
       }
       if (originalLineRate > lineRate) {
-        description += `\nLine Coverage decrease - ${
+        description += `Line Coverage decrease - ${
           originalLineRate - lineRate
-        }%`;
+        }%,`;
       }
       if (originalMethodsRate > methodsRate) {
-        description = `\nMethods Coverage decrease - ${
+        description = `Methods Coverage decrease - ${
           originalMethodsRate - methodsRate
-        }%`;
+        }%,`;
       }
       if (originalStatementsRate > statementsRate) {
-        description += `\nStatements Coverage decrease - ${
+        description += `Statements Coverage decrease - ${
           originalStatementsRate - statementsRate
-        }%`;
+        }%,`;
       }
       return {
         state: "failure",
@@ -147,7 +149,7 @@ function generateStatus({
   }
   return {
     state: "success",
-    description: `Success: \nLine Coverage - ${lineRate}%,\nStatement Coverage - ${statementsRate}%,\nMethods Coverage - ${methodsRate}%,\Branchs Coverage - ${branchesRate}%`,
+    description: `Success: Line Coverage - ${lineRate}%, Statement Coverage - ${statementsRate}%, Methods Coverage - ${methodsRate}%,\Branchs Coverage - ${branchesRate}%`,
     target_url: targetUrl,
     context: statusContext,
   };
@@ -164,7 +166,7 @@ function toInt(value) {
 function loadConfig({ getInput }) {
   const comment = toBool(getInput("comment"));
   const check = toBool(getInput("check"));
-  const githubToken = getInput("github_token", { required: true });
+  const githubToken = process.env.GITHUB_TOKEN;
   const cloverFile = getInput("clover_file", { required: true });
   const originalCloverFile = getInput("original_clover_file", {
     required: true,
@@ -250,14 +252,15 @@ async function run() {
       originalMetric,
     });
     const { state, description } = status;
+    core.info(JSON.stringify(status));
     if (status.state === "failure") {
       core.setFailed(status.description);
     } else {
       core.setOutput("coverage", description);
     }
   } catch (e) {
-    core.setFailed(error.message);
+    core.setFailed(e.message);
   }
 }
 
-run().catch((error) => core.setFailed(error.message));
+run().catch((e) => core.setFailed(e.message));

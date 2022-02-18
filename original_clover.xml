@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <coverage generated="1645156640107" clover="3.2.0">
   <project timestamp="1645156640107" name="All files">
-    <metrics statements="330" coveredstatements="40" conditionals="205" coveredconditionals="121" methods="61" coveredmethods="54" elements="596" coveredelements="464" complexity="0" loc="330" ncloc="330" packages="1" files="17" classes="17" />
+    <metrics statements="330" coveredstatements="289" conditionals="205" coveredconditionals="10" methods="61" coveredmethods="54" elements="596" coveredelements="464" complexity="0" loc="330" ncloc="330" packages="1" files="17" classes="17" />
     <file name="checkClassSelector.ts" path="/Users/lap01267/Documents/workspace/RN_Project/miniapp-v2/packages/tcss/src/checkClassSelector.ts">
       <metrics statements="43" coveredstatements="36" conditionals="32" coveredconditionals="16" methods="7" coveredmethods="6" />
       <line num="3" count="12" type="stmt" />
