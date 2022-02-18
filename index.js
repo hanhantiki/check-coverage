@@ -164,7 +164,7 @@ function toInt(value) {
 function loadConfig({ getInput }) {
   const comment = toBool(getInput("comment"));
   const check = toBool(getInput("check"));
-  const githubToken = getInput("github_token", { required: true });
+  const githubToken = process.env.GITHUB_TOKEN;
   const cloverFile = getInput("clover_file", { required: true });
   const originalCloverFile = getInput("original_clover_file", {
     required: true,
