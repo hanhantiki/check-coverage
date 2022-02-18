@@ -2,6 +2,7 @@ const xml2js = require("xml2js");
 const fs = require("fs");
 const core = require("@actions/core");
 const github = require("@actions/github");
+const s3 = require("aws-sdk/clients/s3");
 
 fs.readFileAsync = (filename) =>
   new Promise((resolve, reject) => {
@@ -319,6 +320,17 @@ async function replaceComment({
   });
 }
 
+async function s3Upload(params) {
+  return new Promise((resolve) => {
+    s3.upload(params, (err, data) => {
+      if (err) core.error(err);
+      core.info(`uploaded - ${data.Key}`);
+      core.info(`located - ${data.Location}`);
+      resolve(data.Location);
+    });
+  });
+}
+
 async function run() {
   try {
     const { context = {} } = github || {};
@@ -329,6 +341,7 @@ async function run() {
       statusContext,
       originalCloverFile,
       commentContext,
+      updateCoverage,
     } = loadConfig(core);
     if (core.isDebug()) {
       core.debug("Handle webhook request");
@@ -336,7 +349,29 @@ async function run() {
     }
 
     const client = github.getOctokit(githubToken);
+    if (updateCoverage) {
+      const S3_ACCESS_KEY = process.env.S3_ACCESS_KEY;
+      const S3_SECRET_ACCESS_KEY = process.env.S3_SECRET_ACCESS_KEY;
+      const S3_BUCKET = process.env.S3_BUCKET;
+      const S3_REGION = process.env.S3_REGION;
 
+      const s3 = new S3({
+        accessKeyId: S3_ACCESS_KEY,
+        secretAccessKey: S3_SECRET_ACCESS_KEY,
+        region: S3_REGION,
+      });
+      const fileStream = fs.createReadStream(cloverFile);
+      const bucketPath = path.join("tf-miniapp-coverage", originalCloverFile);
+      const params = {
+        Bucket: S3_BUCKET,
+        ACL: "public-read",
+        Body: fileStream,
+        Key: bucketPath,
+        ContentType: "text/xml",
+      };
+      await upload(params);
+      return;
+    }
     const coverage = await readFile(cloverFile);
     const metric = readMetric(coverage);
     let originalMetric;
