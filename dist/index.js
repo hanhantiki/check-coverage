@@ -15155,10 +15155,10 @@ function generateTable({ metric, commentContext }) {
 
 function generateStatus({
   metric: {
-    lines: { lineRate },
-    statements: { statementsRate },
-    methods: { methodsRate },
-    branches: { branchesRate },
+    lines: { rate: lineRate },
+    statements: { rate: statementsRate },
+    methods: { rate: methodsRate },
+    branches: { rate: branchesRate },
   },
   targetUrl,
   statusContext,
@@ -15166,10 +15166,10 @@ function generateStatus({
 }) {
   if (originalMetric) {
     const {
-      lines: { originalLineRate },
-      statements: { originalStatementsRate },
-      methods: { originalMethodsRate },
-      branches: { originalBranchesRate },
+      lines: { rate: originalLineRate },
+      statements: { rate: originalStatementsRate },
+      methods: { rate: originalMethodsRate },
+      branches: { rate: originalBranchesRate },
     } = originalMetric;
     if (
       originalBranchesRate > branchesRate ||
