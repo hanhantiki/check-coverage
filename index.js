@@ -329,6 +329,7 @@ async function run() {
       statusContext,
       originalCloverFile,
       commentContext,
+      updateCoverage,
     } = loadConfig(core);
     if (core.isDebug()) {
       core.debug("Handle webhook request");
@@ -336,7 +337,11 @@ async function run() {
     }
 
     const client = github.getOctokit(githubToken);
-
+    if (updateCoverage) {
+      var contents = fs.readFileSync(cloverFile);
+      fs.writeFileSync(originalCloverFile, contents);
+      return;
+    }
     const coverage = await readFile(cloverFile);
     const metric = readMetric(coverage);
     let originalMetric;

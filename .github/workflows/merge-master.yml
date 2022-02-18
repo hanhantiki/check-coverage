@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  write-coverage:
+    runs-on: ubuntu-latest
+    name: Check coverage
+    steps:
+      - uses: actions/checkout@v1
+      - name:
+        id: main-merge
+        uses: ./
+        with:
+          clover_file: "coverage/clover.xml"
+          original_clover_file: "original_clover.xml"
+          update_coverage: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: checkout compiled-master branch
+        uses: actions/checkout@v1
+      - run: |
+          git commit -m 'Update coverage file'
+          git push
