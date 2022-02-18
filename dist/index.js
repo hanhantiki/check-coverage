@@ -15311,7 +15311,7 @@ async function run() {
       originalMetric,
     });
     const { state, description } = status;
-    core.info(status, JSON.stringify(status));
+    core.info(JSON.stringify(status));
     if (status.state === "failure") {
       core.setFailed(status.description);
     } else {
