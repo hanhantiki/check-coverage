@@ -222,37 +222,40 @@ function parseWebhook(request) {
   };
 }
 
-const createStatus = async ({ client, context, sha, status }) =>
+async function createStatus({ client, context, sha, status }) {
   client.repos.createCommitStatus({
     ...context.repo,
     sha,
     ...status,
   });
+}
 
-const listComments = async ({ client, context, prNumber, commentHeader }) => {
+async function listComments({ client, context, prNumber, commentHeader }) {
   const { data: existingComments } = await client.issues.listComments({
     ...context.repo,
     issue_number: prNumber,
   });
 
   return existingComments.filter(({ body }) => body.startsWith(commentHeader));
-};
+}
 
-const insertComment = async ({ client, context, prNumber, body }) =>
+async function insertComment({ client, context, prNumber, body }) {
   client.issues.createComment({
     ...context.repo,
     issue_number: prNumber,
     body,
   });
+}
 
-const updateComment = async ({ client, context, body, commentId }) =>
+async function updateComment({ client, context, body, commentId }) {
   client.issues.updateComment({
     ...context.repo,
     comment_id: commentId,
     body,
   });
+}
 
-const deleteComments = async ({ client, context, comments }) =>
+async function deleteComments({ client, context, comments }) {
   Promise.all(
     comments.map(({ id }) =>
       client.issues.deleteComment({
@@ -261,14 +264,15 @@ const deleteComments = async ({ client, context, comments }) =>
       })
     )
   );
+}
 
-const upsertComment = async ({
+async function upsertComment({
   client,
   context,
   prNumber,
   body,
   existingComments,
-}) => {
+}) {
   const last = existingComments.pop();
 
   await deleteComments({
@@ -290,15 +294,15 @@ const upsertComment = async ({
         prNumber,
         body,
       });
-};
+}
 
-const replaceComment = async ({
+async function replaceComment({
   client,
   context,
   prNumber,
   body,
   existingComments,
-}) => {
+}) {
   await deleteComments({
     client,
     context,
@@ -311,7 +315,7 @@ const replaceComment = async ({
     prNumber,
     body,
   });
-};
+}
 
 async function run() {
   try {
