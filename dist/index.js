@@ -15172,6 +15172,7 @@ function generateStatus({
       branches: { rate: originalBranchesRate },
     } = originalMetric;
     core.info(JSON.stringify(originalMetric));
+    core.info(JSON.stringify(metric));
     if (
       originalBranchesRate > branchesRate ||
       originalLineRate > lineRate ||
