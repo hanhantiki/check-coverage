@@ -118,24 +118,24 @@ function generateStatus({
     ) {
       let description = "Failure: ";
       if (originalBranchesRate > branchesRate) {
-        description += `\nBranches Coverage decrease - ${
+        description += `Branches Coverage decrease - ${
           originalBranchesRate - branchesRate
-        }%`;
+        }%,`;
       }
       if (originalLineRate > lineRate) {
-        description += `\nLine Coverage decrease - ${
+        description += `Line Coverage decrease - ${
           originalLineRate - lineRate
-        }%`;
+        }%,`;
       }
       if (originalMethodsRate > methodsRate) {
-        description = `\nMethods Coverage decrease - ${
+        description = `Methods Coverage decrease - ${
           originalMethodsRate - methodsRate
-        }%`;
+        }%,`;
       }
       if (originalStatementsRate > statementsRate) {
-        description += `\nStatements Coverage decrease - ${
+        description += `Statements Coverage decrease - ${
           originalStatementsRate - statementsRate
-        }%`;
+        }%,`;
       }
       return {
         state: "failure",
@@ -147,7 +147,7 @@ function generateStatus({
   }
   return {
     state: "success",
-    description: `Success: \nLine Coverage - ${lineRate}%,\nStatement Coverage - ${statementsRate}%,\nMethods Coverage - ${methodsRate}%,\Branchs Coverage - ${branchesRate}%`,
+    description: `Success: Line Coverage - ${lineRate}%, Statement Coverage - ${statementsRate}%, Methods Coverage - ${methodsRate}%,\Branchs Coverage - ${branchesRate}%`,
     target_url: targetUrl,
     context: statusContext,
   };
