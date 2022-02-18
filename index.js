@@ -256,8 +256,8 @@ async function run() {
       core.setOutput("coverage", description);
     }
   } catch (e) {
-    core.setFailed(error.message);
+    core.setFailed(e.message);
   }
 }
 
-run().catch((error) => core.setFailed(error.message));
+run().catch((e) => core.setFailed(e.message));
