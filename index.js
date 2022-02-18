@@ -96,7 +96,7 @@ function generateTable({ metric, commentContext }) {
 | :-- | --: |
 | Statements: | ${generateInfo(metric.statements)} |
 | Methods: | ${generateInfo(metric.methods)} |
-| Lines: | ${generateInfo(metric.methods)} |
+| Lines: | ${generateInfo(metric.lines)} |
 | Branches: | ${generateInfo(metric.branches)} |
 `;
 }
