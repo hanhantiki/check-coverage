@@ -38574,7 +38574,7 @@ async function run() {
       const originCoverage = parser.parseString(await s3Download(fileParams));
       originalMetric = readMetric(originCoverage);
     } catch (e) {
-      context.error(e);
+      core.error(e);
     }
 
     const message = generateTable({ metric, commentContext });
