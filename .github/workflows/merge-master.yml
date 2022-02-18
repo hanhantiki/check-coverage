@@ -8,17 +8,7 @@ jobs:
     name: Check coverage
     steps:
       - uses: actions/checkout@v1
-      - name:
-        id: main-merge
-        uses: ./
-        with:
-          clover_file: "coverage/clover.xml"
-          original_clover_file: "original_clover.xml"
-          update_coverage: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: checkout compiled-master branch
-        uses: actions/checkout@v1
       - run: |
+          cp -f coverage/clover.xml original_clover.xml
           git commit -m 'Update coverage file' original_clover.xml
           git push
