@@ -38542,7 +38542,7 @@ async function run() {
       const S3_BUCKET = process.env.S3_BUCKET;
       const S3_REGION = process.env.S3_REGION;
 
-      const s3 = new S3({
+      const s3 = new s3({
         accessKeyId: S3_ACCESS_KEY,
         secretAccessKey: S3_SECRET_ACCESS_KEY,
         region: S3_REGION,
