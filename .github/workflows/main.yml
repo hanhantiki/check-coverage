@@ -13,7 +13,7 @@ jobs:
     steps:
       - name:
         id: hello
-        uses: actions/code-coverage@v1.1
+        uses: actions/code-coverage@v1.2
         with:
           clover_file: "coverage/clover.xml"
           original_clover_file: "original_clover.xml"
