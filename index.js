@@ -92,17 +92,13 @@ function generateTable({ metric, commentContext }) {
 `;
 }
 
-function generateStatus({
-  metric: {
+function generateStatus({ metric, targetUrl, statusContext, originalMetric }) {
+  const {
     lines: { rate: lineRate },
     statements: { rate: statementsRate },
     methods: { rate: methodsRate },
     branches: { rate: branchesRate },
-  },
-  targetUrl,
-  statusContext,
-  originalMetric,
-}) {
+  } = metric;
   if (originalMetric) {
     const {
       lines: { rate: originalLineRate },
