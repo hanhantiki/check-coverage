@@ -1,0 +1,27 @@
+# GITHUB action to block PR if the code coverage is decrease
+
+After ran test, this action will read the clover test file to get coverage matrix and compare to the last matrix.
+If the code coverage is decrease, it will print the error contains which types are decrease. 
+
+## Inputs
+
+## `clover_file`
+
+**Required** Path to clover file clover.xml. Default `coverage/clover.xml`
+
+## `original_clover_file`
+
+**Required** Path to last clover file clover.xml. Default `original_clover.xml`
+
+## Outputs
+
+## `coverage`
+
+Current coverage statitics
+
+## Example usage
+
+uses: actions/code-coverage-action@v1.0
+with:
+clover_file: 'coverage/clover.xml'
+original_clover_file: 'original_clover.xml'
