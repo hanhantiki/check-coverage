@@ -117,8 +117,8 @@ function generateStatus({ metric, targetUrl, statusContext, originalMetric }) {
       methods: { rate: originalMethodsRate },
       branches: { rate: originalBranchesRate },
     } = originalMetric;
-    core.info(JSON.stringify(originalMetric));
-    core.info(JSON.stringify(metric));
+    core.info(`old: ${JSON.stringify(originalMetric)}`);
+    core.info(`new: ${JSON.stringify(metric)}`);
     if (
       originalBranchesRate > branchesRate ||
       originalLineRate > lineRate ||
@@ -178,8 +178,7 @@ function loadConfig({ getInput }) {
   const originalCloverFile = getInput("original_clover_file", {
     required: true,
   });
-  const updateCoverage = getInput("update_coverage");
-  core.info(updateCoverage);
+  const updateCoverage = toBool(getInput("update_coverage"));
   const thresholdAlert = toInt(getInput("threshold_alert") || 90);
   const thresholdWarning = toInt(getInput("threshold_warning") || 50);
   const statusContext = getInput("status_context") || "Coverage Report";
@@ -236,8 +235,6 @@ async function createStatus({ client, context, sha, status }) {
 }
 
 async function listComments({ client, context, prNumber, commentHeader }) {
-  core.info(client);
-  core.info(client.issue);
   const { data: existingComments } = await client.issues.listComments({
     ...context.repo,
     issue_number: prNumber,
@@ -390,7 +387,6 @@ async function run() {
       const fileParams = { Bucket: S3_BUCKET, Key: originalCloverFile };
       const originCoverage = parser.parseString(await s3Download(fileParams));
       originalMetric = readMetric(originCoverage);
-      core.info(`originalMetric: ${JSON.stringify(originalMetric)}`);
     } catch (e) {}
 
     const message = generateTable({ metric, commentContext });
