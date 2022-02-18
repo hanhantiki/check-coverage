@@ -38570,10 +38570,9 @@ async function run() {
     let originalMetric;
     try {
       const fileParams = { Bucket: S3_BUCKET, Key: bucketPath };
-      const fileContent = await s3Download(fileParams);
 
-      const originCoverage = parser.parseString(
-        fileContent.replace("\ufeff", "")
+      const originCoverage = await parser.parseStringPromise(
+        await s3Download(fileParams)
       );
       originalMetric = readMetric(originCoverage);
     } catch (e) {
