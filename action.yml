@@ -1,0 +1,15 @@
+name: "Check Code Coverage"
+description: "Block the PR if code coverage is decrease"
+inputs:
+  clover_file: # id of input
+    description: "Path to the clover.xml file"
+    required: true
+    default: "coverage/clover.xml"
+  original_clover_file: # id of input
+    description: "Path to the the master clover.xml file"
+    required: true
+    default: "original_clover.xml"
+outputs:
+runs:
+  using: "node15"
+  main: "dist/index.js"
