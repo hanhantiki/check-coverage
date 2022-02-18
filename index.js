@@ -335,9 +335,8 @@ async function s3Upload(params) {
 }
 
 async function s3Download(params) {
-  const fileParams = { Bucket: "myBucket", Key: "myKey.csv" };
   return new Promise((resolve) => {
-    s3.getObject(fileParams, function (err, data) {
+    s3.getObject(params, function (err, data) {
       if (err) core.error(err);
       resolve(data.Body.toString());
     });
