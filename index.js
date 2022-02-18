@@ -117,8 +117,8 @@ function generateStatus({ metric, targetUrl, statusContext, originalMetric }) {
       methods: { rate: originalMethodsRate },
       branches: { rate: originalBranchesRate },
     } = originalMetric;
-    core.info(JSON.stringify(originalMetric));
-    core.info(JSON.stringify(metric));
+    core.info(`old: ${JSON.stringify(originalMetric)}`);
+    core.info(`new: ${JSON.stringify(metric)}`);
     if (
       originalBranchesRate > branchesRate ||
       originalLineRate > lineRate ||
@@ -235,8 +235,6 @@ async function createStatus({ client, context, sha, status }) {
 }
 
 async function listComments({ client, context, prNumber, commentHeader }) {
-  core.info(client);
-  core.info(client.issue);
   const { data: existingComments } = await client.issues.listComments({
     ...context.repo,
     issue_number: prNumber,
@@ -389,7 +387,6 @@ async function run() {
       const fileParams = { Bucket: S3_BUCKET, Key: originalCloverFile };
       const originCoverage = parser.parseString(await s3Download(fileParams));
       originalMetric = readMetric(originCoverage);
-      core.info(`originalMetric: ${JSON.stringify(originalMetric)}`);
     } catch (e) {}
 
     const message = generateTable({ metric, commentContext });
