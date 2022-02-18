@@ -38188,7 +38188,7 @@ const xml2js = __nccwpck_require__(6723);
 const fs = __nccwpck_require__(7147);
 const core = __nccwpck_require__(8864);
 const github = __nccwpck_require__(6366);
-const s3 = __nccwpck_require__(4947);
+const S3 = __nccwpck_require__(4947);
 
 fs.readFileAsync = (filename) =>
   new Promise((resolve, reject) => {
@@ -38508,7 +38508,7 @@ async function replaceComment({
   });
 }
 
-async function s3Upload(params) {
+async function s3Upload(s3, params) {
   return new Promise((resolve) => {
     s3.upload(params, (err, data) => {
       if (err) core.error(err);
@@ -38542,7 +38542,7 @@ async function run() {
       const S3_BUCKET = process.env.S3_BUCKET;
       const S3_REGION = process.env.S3_REGION;
 
-      const s3 = new s3({
+      const s3 = new S3({
         accessKeyId: S3_ACCESS_KEY,
         secretAccessKey: S3_SECRET_ACCESS_KEY,
         region: S3_REGION,
@@ -38556,7 +38556,7 @@ async function run() {
         Key: bucketPath,
         ContentType: "text/xml",
       };
-      await upload(params);
+      await upload(s3, params);
       return;
     }
     const { prNumber, prUrl, sha } = parseWebhook(context);
