@@ -60,18 +60,25 @@ function readMetric(coverage) {
   metric.lines.rate = calcRate(metric.lines);
   metric.methods.rate = calcRate(metric.methods);
   metric.branches.rate = calcRate(metric.branches);
-
+  metric.averageRate =
+    [
+      metric.statements.rate,
+      metric.lines.rate,
+      metric.methods.rate,
+      metric.branches.rate,
+    ].reduce((a, b) => a + b) / 4;
   return metric;
 }
 
 function generateBadgeUrl(metric) {
+  const color = metric.averageRate > 50 ? "green" : "red";
   return `https://img.shields.io/static/v1?label=coverage&message=${Math.round(
-    metric.lines.rate
-  )}%&color=${metric.level}`;
+    metric.averageRate
+  )}%&color=${color}`;
 }
 
 function generateEmoji(metric) {
-  return metric.lines.rate === 100 ? " 🎉" : "";
+  return metric.averageRate > 50 ? " 🎉" : "";
 }
 
 function generateInfo({ rate, total, covered }) {
@@ -79,7 +86,7 @@ function generateInfo({ rate, total, covered }) {
 }
 
 function generateCommentHeader({ commentContext }) {
-  return `<!-- coverage-monitor-action: ${commentContext} -->`;
+  return `<!-- coverage: ${commentContext} -->`;
 }
 
 function generateTable({ metric, commentContext }) {
@@ -87,8 +94,10 @@ function generateTable({ metric, commentContext }) {
 ## ${commentContext}${generateEmoji(metric)}
 |  Totals | ![Coverage](${generateBadgeUrl(metric)}) |
 | :-- | --: |
-| Statements: | ${generateInfo(metric.lines)} |
+| Statements: | ${generateInfo(metric.statements)} |
 | Methods: | ${generateInfo(metric.methods)} |
+| Lines: | ${generateInfo(metric.lines)} |
+| Branches: | ${generateInfo(metric.branches)} |
 `;
 }
 
@@ -213,19 +222,114 @@ function parseWebhook(request) {
   };
 }
 
-const createStatus = async ({ client, context, sha, status }) =>
+async function createStatus({ client, context, sha, status }) {
   client.repos.createCommitStatus({
     ...context.repo,
     sha,
     ...status,
   });
+}
+
+async function listComments({ client, context, prNumber, commentHeader }) {
+  core.info(client);
+  core.info(client.issue);
+  const { data: existingComments } = await client.issues.listComments({
+    ...context.repo,
+    issue_number: prNumber,
+  });
+
+  return existingComments.filter(({ body }) => body.startsWith(commentHeader));
+}
+
+async function insertComment({ client, context, prNumber, body }) {
+  client.issues.createComment({
+    ...context.repo,
+    issue_number: prNumber,
+    body,
+  });
+}
+
+async function updateComment({ client, context, body, commentId }) {
+  client.issues.updateComment({
+    ...context.repo,
+    comment_id: commentId,
+    body,
+  });
+}
+
+async function deleteComments({ client, context, comments }) {
+  Promise.all(
+    comments.map(({ id }) =>
+      client.issues.deleteComment({
+        ...context.repo,
+        comment_id: id,
+      })
+    )
+  );
+}
+
+async function upsertComment({
+  client,
+  context,
+  prNumber,
+  body,
+  existingComments,
+}) {
+  const last = existingComments.pop();
+
+  await deleteComments({
+    client,
+    context,
+    comments: existingComments,
+  });
+
+  return last
+    ? updateComment({
+        client,
+        context,
+        body,
+        commentId: last.id,
+      })
+    : insertComment({
+        client,
+        context,
+        prNumber,
+        body,
+      });
+}
+
+async function replaceComment({
+  client,
+  context,
+  prNumber,
+  body,
+  existingComments,
+}) {
+  await deleteComments({
+    client,
+    context,
+    comments: existingComments,
+  });
+
+  return insertComment({
+    client,
+    context,
+    prNumber,
+    body,
+  });
+}
 
 async function run() {
   try {
     const { context = {} } = github || {};
     const { prNumber, prUrl, sha } = parseWebhook(context);
-    const { githubToken, cloverFile, statusContext, originalCloverFile } =
-      loadConfig(core);
+    const {
+      githubToken,
+      cloverFile,
+      statusContext,
+      originalCloverFile,
+      commentContext,
+    } = loadConfig(core);
     if (core.isDebug()) {
       core.debug("Handle webhook request");
       console.log(context);
@@ -241,6 +345,22 @@ async function run() {
       originalMetric = readMetric(originCoverage);
     }
 
+    const message = generateTable({ metric, commentContext });
+
+    await replaceComment({
+      client,
+      context,
+      prNumber,
+      body: message,
+      existingComments: await listComments({
+        client,
+        context,
+        prNumber,
+        commentContext,
+        commentHeader: generateCommentHeader({ commentContext }),
+      }),
+    });
+
     const status = generateStatus({
       targetUrl: prUrl,
       metric,
@@ -248,7 +368,6 @@ async function run() {
       originalMetric,
     });
     const { state, description } = status;
-    core.info(JSON.stringify(status));
     if (status.state === "failure") {
       core.setFailed(status.description);
     } else {
