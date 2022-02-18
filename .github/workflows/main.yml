@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Check coverage
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name:
         id: hello
         uses: ./
