@@ -15296,9 +15296,9 @@ async function run() {
 
     const coverage = await readFile(cloverFile);
     const metric = readMetric(coverage);
-    let originalMetric = readMetric(coverage);
+    let originalMetric;
     if (fs.existsSync(originalCloverFile)) {
-      const originCoverage = await readFile(cloverFile);
+      const originCoverage = await readFile(originalCloverFile);
       originalMetric = readMetric(originCoverage);
     }
 
