@@ -233,7 +233,7 @@ async function createStatus({ client, context, sha, status }) {
 async function listComments({ client, context, prNumber, commentHeader }) {
   core.info(client);
   core.info(client.issue);
-  const { data: existingComments } = await client.listComments({
+  const { data: existingComments } = await client.issues.listComments({
     ...context.repo,
     issue_number: prNumber,
   });
