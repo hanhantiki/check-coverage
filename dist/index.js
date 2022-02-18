@@ -38571,7 +38571,10 @@ async function run() {
     try {
       const fileParams = { Bucket: S3_BUCKET, Key: bucketPath };
       const fileContent = await s3Download(fileParams);
-      const originCoverage = parser.parseString(fileContent);
+
+      const originCoverage = parser.parseString(
+        fileContent.replace("\ufeff", "")
+      );
       originalMetric = readMetric(originCoverage);
     } catch (e) {
       core.error(e);
