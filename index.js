@@ -323,7 +323,7 @@ async function replaceComment({
   });
 }
 
-async function s3Upload(s3, params) {
+async function s3Upload(params) {
   return new Promise((resolve) => {
     s3.upload(params, (err, data) => {
       if (err) core.error(err);
@@ -333,6 +333,22 @@ async function s3Upload(s3, params) {
     });
   });
 }
+
+async function s3Download(params) {
+  const fileParams = { Bucket: "myBucket", Key: "myKey.csv" };
+  return new Promise((resolve) => {
+    s3.getObject(fileParams, function (err, data) {
+      if (err) core.error(err);
+      resolve(data.Body.toString());
+    });
+  });
+}
+
+const s3 = new S3({
+  accessKeyId: S3_ACCESS_KEY,
+  secretAccessKey: S3_SECRET_ACCESS_KEY,
+  region: S3_REGION,
+});
 
 async function run() {
   try {
@@ -357,11 +373,6 @@ async function run() {
       const S3_BUCKET = process.env.S3_BUCKET;
       const S3_REGION = process.env.S3_REGION;
 
-      const s3 = new S3({
-        accessKeyId: S3_ACCESS_KEY,
-        secretAccessKey: S3_SECRET_ACCESS_KEY,
-        region: S3_REGION,
-      });
       const fileStream = fs.createReadStream(cloverFile);
       const bucketPath = path.join("tf-miniapp-coverage", originalCloverFile);
       const params = {
@@ -378,10 +389,12 @@ async function run() {
     const coverage = await readFile(cloverFile);
     const metric = readMetric(coverage);
     let originalMetric;
-    if (fs.existsSync(originalCloverFile)) {
-      const originCoverage = await readFile(originalCloverFile);
+    try {
+      const fileParams = { Bucket: S3_BUCKET, Key: originalCloverFile };
+      const originCoverage = parser.parseString(await s3Download(fileParams));
       originalMetric = readMetric(originCoverage);
-    }
+      core.info(`originalMetric: ${JSON.stringify(originalMetric)}`);
+    } catch (e) {}
 
     const message = generateTable({ metric, commentContext });
 

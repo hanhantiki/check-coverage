@@ -20,7 +20,7 @@ jobs:
           original_clover_file: "original_clover.xml"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Use the output from the `hello` step
-      - name: Get the output
-        run: echo "The result was $"
+          S3_ACCESS_KEY: ${{secrets.S3_ACCESS_KEY}}
+          S3_SECRET_ACCESS_KEY: ${{secrets.S3_SECRET_ACCESS_KEY}}
+          S3_BUCKET: ${{secrets.S3_BUCKET}}
+          S3_REGION: ${{secrets.S3_REGION}}
