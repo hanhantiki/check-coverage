@@ -38531,9 +38531,9 @@ async function s3Download(params) {
 }
 
 const s3 = new S3({
-  accessKeyId: S3_ACCESS_KEY,
-  secretAccessKey: S3_SECRET_ACCESS_KEY,
-  region: S3_REGION,
+  accessKeyId: process.env.S3_ACCESS_KEY,
+  secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+  region: process.env.S3_REGION,
 });
 
 async function run() {
@@ -38554,10 +38554,7 @@ async function run() {
 
     const client = github.getOctokit(githubToken);
     if (updateCoverage) {
-      const S3_ACCESS_KEY = process.env.S3_ACCESS_KEY;
-      const S3_SECRET_ACCESS_KEY = process.env.S3_SECRET_ACCESS_KEY;
       const S3_BUCKET = process.env.S3_BUCKET;
-      const S3_REGION = process.env.S3_REGION;
 
       const fileStream = fs.createReadStream(cloverFile);
       const bucketPath = path.join("tf-miniapp-coverage", originalCloverFile);
