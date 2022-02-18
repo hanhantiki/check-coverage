@@ -250,7 +250,7 @@ async function run() {
       originalMetric,
     });
     const { state, description } = status;
-    core.log(status);
+    core.info(status, JSON.stringify(status));
     if (status.state === "failure") {
       core.setFailed(status.description);
     } else {
