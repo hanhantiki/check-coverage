@@ -177,6 +177,7 @@ function loadConfig({ getInput }) {
   const originalCloverFile = getInput("original_clover_file", {
     required: true,
   });
+  const updateCoverage = getInput("update_coverage");
   const thresholdAlert = toInt(getInput("threshold_alert") || 90);
   const thresholdWarning = toInt(getInput("threshold_warning") || 50);
   const statusContext = getInput("status_context") || "Coverage Report";
@@ -198,6 +199,7 @@ function loadConfig({ getInput }) {
     commentContext,
     commentMode,
     originalCloverFile,
+    updateCoverage,
   };
 }
 

@@ -1,14 +1,18 @@
 name: "Check Code Coverage"
 description: "Block the PR if code coverage is decrease"
 inputs:
-  clover_file: # id of input
+  clover_file:
     description: "Path to the clover.xml file"
     required: true
     default: "coverage/clover.xml"
-  original_clover_file: # id of input
+  original_clover_file:
     description: "Path to the the master clover.xml file"
     required: true
     default: "original_clover.xml"
+  update_coverage:
+    description: "Path to the the master clover.xml file"
+    required: false
+    default: false
 outputs:
   coverage:
     description: "The code coverage"
