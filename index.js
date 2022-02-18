@@ -336,7 +336,6 @@ async function s3Upload(params) {
 async function run() {
   try {
     const { context = {} } = github || {};
-    const { prNumber, prUrl, sha } = parseWebhook(context);
     const {
       githubToken,
       cloverFile,
@@ -374,6 +373,7 @@ async function run() {
       await upload(params);
       return;
     }
+    const { prNumber, prUrl, sha } = parseWebhook(context);
     const coverage = await readFile(cloverFile);
     const metric = readMetric(coverage);
     let originalMetric;
