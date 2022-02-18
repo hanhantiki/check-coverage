@@ -38189,6 +38189,7 @@ const fs = __nccwpck_require__(7147);
 const core = __nccwpck_require__(8864);
 const github = __nccwpck_require__(6366);
 const S3 = __nccwpck_require__(4947);
+const path = __nccwpck_require__(1017);
 
 fs.readFileAsync = (filename) =>
   new Promise((resolve, reject) => {

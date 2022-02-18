@@ -3,6 +3,7 @@ const fs = require("fs");
 const core = require("@actions/core");
 const github = require("@actions/github");
 const S3 = require("aws-sdk/clients/s3");
+const path = require("path");
 
 fs.readFileAsync = (filename) =>
   new Promise((resolve, reject) => {
