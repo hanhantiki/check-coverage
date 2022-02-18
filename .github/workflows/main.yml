@@ -19,6 +19,8 @@ jobs:
         with:
           clover_file: "coverage/clover.xml"
           original_clover_file: "original_clover.xml"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Use the output from the `hello` step
       - name: Get the output
         run: echo "The result was $"
