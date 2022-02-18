@@ -323,7 +323,6 @@ async function run() {
       statusContext,
       originalCloverFile,
       commentContext,
-      commentMode,
     } = loadConfig(core);
     if (core.isDebug()) {
       core.debug("Handle webhook request");
@@ -342,47 +341,19 @@ async function run() {
 
     const message = generateTable({ metric, commentContext });
 
-    switch (commentMode) {
-      case "insert":
-        await insertComment({
-          client,
-          context,
-          prNumber,
-          body: message,
-        });
-
-        break;
-      case "update":
-        await upsertComment({
-          client,
-          context,
-          prNumber,
-          body: message,
-          existingComments: await listComments({
-            client,
-            context,
-            prNumber,
-            commentHeader: generateCommentHeader({ commentContext }),
-          }),
-        });
-
-        break;
-      case "replace":
-      default:
-        await replaceComment({
-          client,
-          context,
-          prNumber,
-          body: message,
-          existingComments: await listComments({
-            client,
-            context,
-            prNumber,
-            commentContext,
-            commentHeader: generateCommentHeader({ commentContext }),
-          }),
-        });
-    }
+    await replaceComment({
+      client,
+      context,
+      prNumber,
+      body: message,
+      existingComments: await listComments({
+        client,
+        context,
+        prNumber,
+        commentContext,
+        commentHeader: generateCommentHeader({ commentContext }),
+      }),
+    });
 
     const status = generateStatus({
       targetUrl: prUrl,
