@@ -317,8 +317,14 @@ async function run() {
   try {
     const { context = {} } = github || {};
     const { prNumber, prUrl, sha } = parseWebhook(context);
-    const { githubToken, cloverFile, statusContext, originalCloverFile } =
-      loadConfig(core);
+    const {
+      githubToken,
+      cloverFile,
+      statusContext,
+      originalCloverFile,
+      commentContext,
+      commentMode,
+    } = loadConfig(core);
     if (core.isDebug()) {
       core.debug("Handle webhook request");
       console.log(context);
