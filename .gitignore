@@ -1,0 +1,7 @@
+node_modules
+.docusaurus
+.prettierignore
+.DS_Store
+build
+test
+.npmrc

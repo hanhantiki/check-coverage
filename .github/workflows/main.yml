@@ -1,0 +1,22 @@
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+
+jobs:
+  check-coverage:
+    runs-on: ubuntu-latest
+    name: Check coverage
+    steps:
+      - name:
+        id: hello
+        uses: actions/code-coverage-action@v1.1
+        with:
+          clover_file: "coverage/clover.xml"
+          original_clover_file: "original_clover.xml"
+      # Use the output from the `hello` step
+      - name: Get the output
+        run: echo "The result was $"
