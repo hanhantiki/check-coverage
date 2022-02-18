@@ -38550,9 +38550,9 @@ async function run() {
     }
     const S3_BUCKET = process.env.S3_BUCKET;
     const client = github.getOctokit(githubToken);
+    const bucketPath = path.join("tf-miniapp-coverage", originalCloverFile);
     if (updateCoverage) {
       const fileStream = fs.createReadStream(cloverFile);
-      const bucketPath = path.join("tf-miniapp-coverage", originalCloverFile);
       const params = {
         Bucket: S3_BUCKET,
         ACL: "public-read",
@@ -38568,7 +38568,7 @@ async function run() {
     const metric = readMetric(coverage);
     let originalMetric;
     try {
-      const fileParams = { Bucket: S3_BUCKET, Key: originalCloverFile };
+      const fileParams = { Bucket: S3_BUCKET, Key: bucketPath };
       const originCoverage = parser.parseString(await s3Download(fileParams));
       originalMetric = readMetric(originCoverage);
     } catch (e) {
