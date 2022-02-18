@@ -387,7 +387,9 @@ async function run() {
       const fileParams = { Bucket: S3_BUCKET, Key: originalCloverFile };
       const originCoverage = parser.parseString(await s3Download(fileParams));
       originalMetric = readMetric(originCoverage);
-    } catch (e) {}
+    } catch (e) {
+      context.error(e);
+    }
 
     const message = generateTable({ metric, commentContext });
 
