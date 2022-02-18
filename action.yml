@@ -13,5 +13,5 @@ outputs:
   coverage:
     description: "The code coverage"
 runs:
-  using: "node15"
+  using: "node12"
   main: "dist/index.js"
