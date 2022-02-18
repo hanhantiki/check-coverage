@@ -38365,6 +38365,7 @@ function loadConfig({ getInput }) {
     required: true,
   });
   const updateCoverage = getInput("update_coverage");
+  core.info(updateCoverage);
   const thresholdAlert = toInt(getInput("threshold_alert") || 90);
   const thresholdWarning = toInt(getInput("threshold_warning") || 50);
   const statusContext = getInput("status_context") || "Coverage Report";
