@@ -10,5 +10,7 @@ jobs:
       - uses: actions/checkout@v1
       - run: |
           cp -f coverage/clover.xml original_clover.xml
+          git config user.email "han.han@tiki.vn"
+          git config user.name "HanHan"
           git commit -m 'Update coverage file' original_clover.xml
           git push
