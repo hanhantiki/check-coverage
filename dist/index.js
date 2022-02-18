@@ -38557,7 +38557,7 @@ async function run() {
         Key: bucketPath,
         ContentType: "text/xml",
       };
-      await upload(s3, params);
+      await s3Upload(s3, params);
       return;
     }
     const { prNumber, prUrl, sha } = parseWebhook(context);
