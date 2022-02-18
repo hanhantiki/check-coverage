@@ -10,6 +10,8 @@ inputs:
     required: true
     default: "original_clover.xml"
 outputs:
+  coverage:
+    description: "The code coverage"
 runs:
   using: "node15"
   main: "dist/index.js"

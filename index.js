@@ -253,7 +253,7 @@ async function run() {
     if (status.state === "failure") {
       core.setFailed(status.description);
     } else {
-      core.setOutput(description);
+      core.setOutput("coverage", description);
     }
   } catch (e) {
     core.setFailed(error.message);
