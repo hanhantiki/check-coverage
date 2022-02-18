@@ -38,7 +38,7 @@ function calcRate({ total, covered }) {
 }
 
 function readMetric(coverage) {
-  core.info(coverage);
+  core.info(JSON.stringify(coverage));
   const data = coverage.coverage.project[0].metrics[0].$;
   const metric = {
     statements: {
@@ -385,7 +385,6 @@ async function run() {
     try {
       const fileParams = { Bucket: S3_BUCKET, Key: bucketPath };
       const fileContent = await s3Download(fileParams);
-      core.info(fileContent);
       const originCoverage = parser.parseString(fileContent);
       originalMetric = readMetric(originCoverage);
     } catch (e) {
