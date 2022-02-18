@@ -38548,11 +38548,9 @@ async function run() {
       core.debug("Handle webhook request");
       console.log(context);
     }
-
+    const S3_BUCKET = process.env.S3_BUCKET;
     const client = github.getOctokit(githubToken);
     if (updateCoverage) {
-      const S3_BUCKET = process.env.S3_BUCKET;
-
       const fileStream = fs.createReadStream(cloverFile);
       const bucketPath = path.join("tf-miniapp-coverage", originalCloverFile);
       const params = {
