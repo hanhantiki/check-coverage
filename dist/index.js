@@ -15121,18 +15121,25 @@ function readMetric(coverage) {
   metric.lines.rate = calcRate(metric.lines);
   metric.methods.rate = calcRate(metric.methods);
   metric.branches.rate = calcRate(metric.branches);
-
+  metric.averageRate =
+    [
+      metric.statements.rate,
+      metric.lines.rate,
+      metric.methods.rate,
+      metric.branches.rate,
+    ].reduce((a, b) => a + b) / 4;
   return metric;
 }
 
 function generateBadgeUrl(metric) {
+  const color = metric.averageRate > 50 ? "green" : "red";
   return `https://img.shields.io/static/v1?label=coverage&message=${Math.round(
-    metric.lines.rate
-  )}%&color=${metric.level}`;
+    metric.averageRate
+  )}%&color=${color}`;
 }
 
 function generateEmoji(metric) {
-  return metric.lines.rate === 100 ? " 🎉" : "";
+  return metric.averageRate > 50 ? " 🎉" : "";
 }
 
 function generateInfo({ rate, total, covered }) {
@@ -15140,7 +15147,7 @@ function generateInfo({ rate, total, covered }) {
 }
 
 function generateCommentHeader({ commentContext }) {
-  return `<!-- coverage-monitor-action: ${commentContext} -->`;
+  return `<!-- coverage: ${commentContext} -->`;
 }
 
 function generateTable({ metric, commentContext }) {
@@ -15148,8 +15155,10 @@ function generateTable({ metric, commentContext }) {
 ## ${commentContext}${generateEmoji(metric)}
 |  Totals | ![Coverage](${generateBadgeUrl(metric)}) |
 | :-- | --: |
-| Statements: | ${generateInfo(metric.lines)} |
+| Statements: | ${generateInfo(metric.statements)} |
 | Methods: | ${generateInfo(metric.methods)} |
+| Lines: | ${generateInfo(metric.methods)} |
+| Branches: | ${generateInfo(metric.branches)} |
 `;
 }
 
@@ -15281,6 +15290,90 @@ const createStatus = async ({ client, context, sha, status }) =>
     ...status,
   });
 
+const listComments = async ({ client, context, prNumber, commentHeader }) => {
+  const { data: existingComments } = await client.issues.listComments({
+    ...context.repo,
+    issue_number: prNumber,
+  });
+
+  return existingComments.filter(({ body }) => body.startsWith(commentHeader));
+};
+
+const insertComment = async ({ client, context, prNumber, body }) =>
+  client.issues.createComment({
+    ...context.repo,
+    issue_number: prNumber,
+    body,
+  });
+
+const updateComment = async ({ client, context, body, commentId }) =>
+  client.issues.updateComment({
+    ...context.repo,
+    comment_id: commentId,
+    body,
+  });
+
+const deleteComments = async ({ client, context, comments }) =>
+  Promise.all(
+    comments.map(({ id }) =>
+      client.issues.deleteComment({
+        ...context.repo,
+        comment_id: id,
+      })
+    )
+  );
+
+const upsertComment = async ({
+  client,
+  context,
+  prNumber,
+  body,
+  existingComments,
+}) => {
+  const last = existingComments.pop();
+
+  await deleteComments({
+    client,
+    context,
+    comments: existingComments,
+  });
+
+  return last
+    ? updateComment({
+        client,
+        context,
+        body,
+        commentId: last.id,
+      })
+    : insertComment({
+        client,
+        context,
+        prNumber,
+        body,
+      });
+};
+
+const replaceComment = async ({
+  client,
+  context,
+  prNumber,
+  body,
+  existingComments,
+}) => {
+  await deleteComments({
+    client,
+    context,
+    comments: existingComments,
+  });
+
+  return insertComment({
+    client,
+    context,
+    prNumber,
+    body,
+  });
+};
+
 async function run() {
   try {
     const { context = {} } = github || {};
@@ -15302,6 +15395,50 @@ async function run() {
       originalMetric = readMetric(originCoverage);
     }
 
+    const message = generateTable({ metric, commentContext });
+
+    switch (commentMode) {
+      case "insert":
+        await insertComment({
+          client,
+          context,
+          prNumber,
+          body: message,
+        });
+
+        break;
+      case "update":
+        await upsertComment({
+          client,
+          context,
+          prNumber,
+          body: message,
+          existingComments: await listComments({
+            client,
+            context,
+            prNumber,
+            commentHeader: generateCommentHeader({ commentContext }),
+          }),
+        });
+
+        break;
+      case "replace":
+      default:
+        await replaceComment({
+          client,
+          context,
+          prNumber,
+          body: message,
+          existingComments: await listComments({
+            client,
+            context,
+            prNumber,
+            commentContext,
+            commentHeader: generateCommentHeader({ commentContext }),
+          }),
+        });
+    }
+
     const status = generateStatus({
       targetUrl: prUrl,
       metric,
@@ -15309,7 +15446,6 @@ async function run() {
       originalMetric,
     });
     const { state, description } = status;
-    core.info(JSON.stringify(status));
     if (status.state === "failure") {
       core.setFailed(status.description);
     } else {

@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Check coverage
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name:
         id: hello
         uses: ./
@@ -21,6 +20,7 @@ jobs:
           original_clover_file: "original_clover.xml"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       # Use the output from the `hello` step
       - name: Get the output
         run: echo "The result was $"
