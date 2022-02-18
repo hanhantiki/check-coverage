@@ -110,6 +110,7 @@ function generateStatus({
       methods: { rate: originalMethodsRate },
       branches: { rate: originalBranchesRate },
     } = originalMetric;
+    core.info(JSON.stringify(originalMetric));
     if (
       originalBranchesRate > branchesRate ||
       originalLineRate > lineRate ||
