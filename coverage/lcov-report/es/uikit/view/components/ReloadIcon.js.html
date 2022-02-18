@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for es/uikit/view/components/ReloadIcon.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">es/uikit/view/components</a> ReloadIcon.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.71% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>6/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>6/6</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = require("react");
+const react_native_1 = require("react-native");
+const ReloadIcon = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; (<span class="cstat-no" title="statement not covered" >React.createElement(react_native_1.Image, Object.assign({}, props, { style: [styles.image, props.style], source: {</span>
+        uri: 'data:image/png;base64,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',
+    } })));
+const styles = react_native_1.StyleSheet.create({
+    image: { width: 20, height: 20 },
+});
+exports.default = ReloadIcon;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Wed Feb 16 2022 14:31:55 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

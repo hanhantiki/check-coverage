@@ -1,0 +1,122 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for es/uikit/view/components/ShareIcon.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">es/uikit/view/components</a> ShareIcon.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.71% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>6/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>6/6</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = require("react");
+const react_native_1 = require("react-native");
+const ShareIcon = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; (<span class="cstat-no" title="statement not covered" >React.createElement(react_native_1.Image, Object.assign({}, props, { style: [styles.image, props.style], source: {</span>
+        uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAABdCAYAAAAsRtHAAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASuSURBVHgB7dtNbhNJFMDx9/rDyoRZ+AZ4NYpXeCTCFnOCYU4w5ATACRJuwJwAH2HmBIQdIpEwElLIij6CWSCi2K5HvY6T4Piruvqryv3+G0LkSNFPT1XVZQdAkiSP+3HW64AHBbBltTB+6wP+1sHrOj7gbyM85zz+tsJzTuNvMzznLP62w3NO4jcBnnMOvynwnFP4TYLnnMFvGjznBH4T4bna8ZsKz9WK32R4rjb8psNzteAL/FWV4wv8bZXiC/x8leEL/GKV4Av88krHF/jVlYov8OsrDV/gN1cKvsCbVTi+wJtXKL7AZ6swfARPoo+99jiOO0E47SkK2mGE94GgjQQd0iCzl3WgmpJLGj/5rTtMwDIn4Rl5shP1iKAXhvhAA/ehOlTTcuE7Az8+e9iPguAxEfX1BPfBj6zxa4Vn7CDEv4DoGRC2wc+s8CuH52UEdlvPFagXHmPfLTN+ZfA83SHioUfLSNYy4ZcO3wDwXzPGLw2+YeC/ZoRfOHy6ht+LD5WCF9DcNuIXCj85f/QUQb3Zok0zT2vxC4GXKV/ZSvzc8KTvLZS+vwD3nixdaSl+rksy3kBVEH0EQV/X0os1a3g6f/RPgPhW1nOjFvCt4On84aEiGoCUpTn8zGv8FToegWRbuuZnmnheXgQ9bzzrO+YTn55eeCOVNT1HqKc90Cec90lk8vKbI6N+xwcky27R+X9GSw1h/AbkyJijeXRuIzxvpg286CqwRfT0u+t+ZLbEfAXJsuXo3NqJny0xklWr0bmV8JOz/WeyxNi2Hp1bCY8IhyBZtBmdWwrP0w5yirHIDJ1bCi/TbpM5OrcAL9NuUzZ0bgEekZ6DlKHs6NzclcHl5/2e/qcHkmF26NzcxIcxyLQbZ4/OzS81JOd2s/KhczdLDb9/Cm5tqgkBJYiYKIJvpCgJUI304/SIEEcTiJLrF+5c7Izwz+MRfz39sk9QavnRuds1HulpLR8eRhgR0ZAAPyFNhyoMh/H3e8k1pFsVg87dwAeAj6Gi9CQfE8E7/eVxvHd6DF5UHDqXwqe3kIBln2aG+g3y/6OL31+7Oc3rKhadS+GnFPawpFVmNt2v4q4vk3234tG5q4kPoF+0u//gXDnoXAofAj4o7CigN8sp0avW3ulr8Lry0LmriUe9vhcgz1M+VtFBWb9sdZWLzkXpNUEBnx5QhHpZOTkC7ysfnYswpHbe87teyw/i7ocBeF816FzEf8Rr7a7Xc6Xob7830OuqQ+cifYy0XmamCE9a3dMheF+16FyAgB2wiJeX1h8ngm5ZECDdh4zxRhp1TwbgffWgc4E+RWZaahTAv3ojPQLvqw+d0+f4LJ/+xST6sXsE3lcvOqcvJc0nnn9Z/y647lY/OheYPjxNgV7KE2lxmX1MW18FyN1LsRnBjyk6AK9zC53bCM9HR7+XGPfQuQ3wmPh9dHQTnVv/+Xh9rw7e5i46t/qPzxAG0Z6vT6duo3MrJ/5ShZ5Ou/vo3FJ4nzdUH9C5JfD6WuBi19szuy8DswDPG6r/1wLuN7e56ifU/6Lu6QCk0pubeP2E+hKkSrqB53t2/y/B/Gm21GAyocDzSzC/SieeN1SZ9mr7CWyuuDUyS4TeAAAAAElFTkSuQmCC',
+    } })));
+const styles = react_native_1.StyleSheet.create({
+    image: {
+        width: 23,
+        height: 23,
+    },
+});
+exports.default = ShareIcon;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Wed Feb 16 2022 14:31:55 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

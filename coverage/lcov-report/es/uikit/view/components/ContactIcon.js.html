@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for es/uikit/view/components/ContactIcon.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">es/uikit/view/components</a> ContactIcon.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.71% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>6/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>6/6</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = require("react");
+const react_native_1 = require("react-native");
+const ContactIcon = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; (<span class="cstat-no" title="statement not covered" >React.createElement(react_native_1.Image, Object.assign({}, props, { style: [styles.image, props.style], source: {</span>
+        uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA8CAYAAADVPrJMAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATZSURBVHgB7ZvPbxtFFMffOIHWQULmwH35C2r1wgVhNxduUPUPoAl/QJNUghAu+7YSqsghbSpxpS4XjqQXjq1z49bwD9Dlxi1RBWrayvv4Pq+Nne3Oem3PJpvYH2mz9s54dr77Zt782BdDBcLMNaJLdWMWrohEdSLj4TIOg+tSG+Q0R/iOg0KccVQOiDp/MG+1qQAMOUaFGrN0U0Suo/j6SXET0TaGWnho+3gIITnAmWjmu01YyMfHJhXHHlG0O20LmFr0KYlN8hzWD3x/8xFNwMSimbe16d6j0xWb5Cks/9W4zb5CExAE22sQ/IzOVrByDRL+hAH8cX40lqXRlD3c5CGNJbbrmeGMTBvO7S9YBp751REc3lFcJusJzm7Jg8euxZ5emriGlqSePjcwQnQjj9Vzi+4151/zVUSFRuhvsjep0/H9h2TM30085BV8beS7Lz3HfZdHCc8lOhas/Wfk8BPCwbDIy8d9S7rA93/EA3ix0nOYXnZuORSpLAfBNwe2HCNF5xNsjtAkgyDYvE8Fkl98tvBM0b0+/HTEDdo4Vl1NHEbBrNX5/SPUawcfrttzyiGOq2n1MvbCdQpZVQ/tkZ2AeZPpDGDW0fKYe1a3gT7+8mqyq2UMWVVtqp49PVo9K8EK8waJvAf/0bmdkQ0tYmknedGkF3h3pTc0WVDBWy0qAb1+vor6/mTJIhgKMZR9t9e/sJDMETfrd3+h7tiZCpr0t4U6rHHY3/+NGo0vdOx/YUzls5QsMGzl42bzk0ftdvtYL6Q078uYbdmateyeZZO2EQS3YO3L9zGC7FqyoJlX1/tfToiOvbVZsfwwjB1HWdkQYy4F1K1nGnIrbsVvW7pJFivrpMPlhMM1zAaOrXaoC5D0HOaDvrUToq3uvz3pMu40CQL4M1pox3OHNMzn+vd/0fG62NaXo4DOCSIfwlvLHUtqXXUOWdrYZjdhUXtVRTDC2urJh0XTlbRCRMjmEUvMO2rtfUvip8OWbqbl0HUwnTt0jUQ2HxRbmvn7enq6YLFvX6KVFWZsqFA1jNf1b7PYO3npPzc15h+EcqE3MC3mrzeoAOIFxhsdXdbzbSu/sqZ0LY1+69HUaEWidTwkJscw78ABvYZqYQf76LFoY6KpCxoga+QcraZ1pjguZqLd0BFlOnyAfbSHibNyCxBdfmZS9GJ2coS18xbbUvN79sIQLHVTDZe1nTRv3rPCXPSsMBc9K8xFzwpz0bPC7IrGC2zLJn6loXPYXlzIOeMNNh5MIy2lu+DAJsKBxehN/JhxxjuseykP5jWVjUHgjvjWzc5B5u1DVwt1rHychl/iget2UUSOGDJv5xzub0/G0Gud7rr5Gc0AiY4c3aBunMY0SAFvNrW3GGflJt5PayROtIyPLYp34yahRc4Rcdn9MqKLutG9Nyl+x1WnkaglOg+ytpemYbD3rXXK5XDD3tlLJjgPci8LGI2gLXqSMmzJhZyRxQF2Hc82Tl840UMRhU8sWcIL07wHM7GqvrLUgDkvJZvAJd4ulWjff0CVyvEaKsYuX+MM0Q2NXqSS0I/8w+KnqMA8if/vYyssTZ825l9dFX1JxXGnHyFVIkfmdtaV4ES0cmlEi7yvM8CfyS3ah68lQztL58iM+WedaCEjPnUkYRxOFT0ejvwd5j8hrsJs9i09CwAAAABJRU5ErkJggg==',
+    } })));
+const styles = react_native_1.StyleSheet.create({
+    image: { width: 20, height: 20 },
+});
+exports.default = ContactIcon;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Wed Feb 16 2022 14:31:55 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

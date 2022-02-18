@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for tf-miniapp-core/es/uikit/view/components/SettingIcon.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">tf-miniapp-core/es/uikit/view/components</a> SettingIcon.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.71% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>6/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>6/6</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = require("react");
+const react_native_1 = require("react-native");
+const SettingIcon = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; (<span class="cstat-no" title="statement not covered" >React.createElement(react_native_1.Image, Object.assign({}, props, { style: [styles.image, props.style], source: {</span>
+        uri: 'data:image/png;base64,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',
+    } })));
+const styles = react_native_1.StyleSheet.create({
+    image: { width: 17.39, height: 18 },
+});
+exports.default = SettingIcon;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Thu Feb 17 2022 10:04:59 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../../sorter.js"></script>
+        <script src="../../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,161 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for tf-miniapp-core/src/uikit/view/components/CloseIcon.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">tf-miniapp-core/src/uikit/view/components</a> CloseIcon.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/4</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { Image } from 'react-native';
+&nbsp;
+const CloseIcon = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span> theme, ...rest }) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  if (theme === 'light') {</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;Image
+        {...rest}
+        source={{
+          uri:
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASkSURBVHgB1VuBcdsgFP3uAnUmqLqBO0GVCZJOYGeCZgP7OkEmqLNB2gWqdIEmXaC4CzSZIK9w4AtGHwQSyPK74xQH+PAeHwQIZjQyAFTyocLcBIXd/jmbzXY0ImZUEIbshQwLGWrSxGPwSFqUexl+SlEe6VQgSS9kWMsgkA9Chhsj6DQhK1fL0KA8GhkuKRMGdwFFXD7WpF08BjsZnq2nQmU9K4rDToZPR+sekvhchtuO1noyLfYZumvMI+3WJk+DbmwxdtcwFXxC2E1XMYQjypobW02gPIGM3aKrQusO4jUVgmpphL1uTaVgWmLrKfihJHGmLgv43zJbZPA8t8C5Icnhmo4EWfYm0CB5RAiQF2O2eqB+Pm/II4I0cuchX9FEAD02cCJsaQjAD3j53CsjAp7ab2CUGS89LT858nsYEQRT7zrFjs+lxJTc3gdP3Z+SGg78u3ZBJwLoiZqLuPEAelR1saETA/hXZB2TUTiZBJ0o0B4Um64Ml6fs+i48XaEOZWjQp98c2lhDT0ezLU4MEWVzSYlgODW+hBWjVkUJgF612UiuMGNz6djcJOavo7waesupW6lwYdzbo7cIDHmFPl7ZdIqI9uDXx904tfvaWnpsJXcttD1TuAm4V1+vGR9TWLIIAfIr6gHoGaK7gVPZCa6dyGT3dwrsLUJu8pbdxrF3bUfeeSP7F5gsQinyxrbbyFs70p0w1JQBKSKUJG/su+OTsCNdZFvxxYhQmrwpY+4a30dUXmXyFe4VASOQt+ohnDIqzjUGDYCBwn0ijELe1KHV1d/QSJBfcG7l4yoi6ZVJWwLPzu+3SoDK+eeOCiFChJLkFf46v89G8wAL6BlXBEoA1y3OqBCgR/7bQJJbZFhABfDO+b3jBHhHBRBBfo/SIhwC47wGl77RHhnWDgn1EE4Z1T7CRc6J0NJDcGWlKS4CfBMhEymcuJoyAAmTnNIioD3febAj3Y2MHIuhZSx5K08xEdBeDH0LRQ5dDi9TyVt5i4iAjuWwOxCmfUk5LGjZl7xlI6sIYPo/3H1BtMeBFSUC/LZ6X1s+EWpKBLq2xEyijZMo16boinrCI0LSpqhMz7n/DZdwMVRtRsQVDQQGbrUjZbsfsR8Ruiu8BfKdHoHuWsrmJjEf55VNKEONgV4wJci6f2D4XHRlapwMD3SCMK0vHC5/YjJyXnC0k2B9YMhvGB5xH3rBj+Y1nQAMec71498e4L+kCEz8iIwh/x6M6yfX3dMVlOFJHpIy5M/AH5Lq96kefD+a3DE5izx3TG5DQwB+PBCYSHcIuL3CsIOSpoDQUdmjHp8x5M895H9hhPPCCmsaGYb4DP7D0vnIW4WGboiIMbzBIn4eaJAtSo5RAdX3hVdUABbxxlP2C8Y6zwi9OBEBIRrojZFcV2auEL4y8w9jT9TQfX3FFkNdgKpjBEH70lTobpJq9a8YIHSOa3Oq799R2nW3nfU30eFV2irChtrSvpfhi/yWeE9TAHS3aFAWqsV/YMrrEuiuoc4cCgzHiwlqLq8G3+xvmtKXp1WFP9LrxekYAsq9d6Rd/LcM30veKC8qAAe8Xp8n6/lswujX5/8DimuofcsDqIkAAAAASUVORK5CYII=',
+        }}
+      /&gt;
+    );
+  }
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;Image
+      {...rest}
+      source={{
+        uri:
+          'data:image/png;base64,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',
+      }}
+    /&gt;
+  );
+};
+&nbsp;
+export default CloseIcon;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Thu Apr 01 2021 17:53:46 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../../sorter.js"></script>
+        <script src="../../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

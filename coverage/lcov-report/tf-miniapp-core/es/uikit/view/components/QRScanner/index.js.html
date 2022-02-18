@@ -1,0 +1,401 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for tf-miniapp-core/es/uikit/view/components/QRScanner/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../../../index.html">All files</a> / <a href="index.html">tf-miniapp-core/es/uikit/view/components/QRScanner</a> index.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/42</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/27</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/13</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/36</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var __awaiter = <span class="cstat-no" title="statement not covered" >(this &amp;&amp; this.__awaiter) || <span class="fstat-no" title="function not covered" >fu</span>nction (thisArg, _arguments, P, generator) {</span>
+    function <span class="fstat-no" title="function not covered" >adopt(</span>value) { <span class="cstat-no" title="statement not covered" >return value instanceof P ? value : new P(<span class="fstat-no" title="function not covered" >fu</span>nction (resolve) { <span class="cstat-no" title="statement not covered" >resolve(value); </span>}); </span>}
+<span class="cstat-no" title="statement not covered" >    return new (P || (P = Promise))(<span class="fstat-no" title="function not covered" >fu</span>nction (resolve, reject) {</span>
+        function <span class="fstat-no" title="function not covered" >fulfilled(</span>value) { <span class="cstat-no" title="statement not covered" >try { <span class="cstat-no" title="statement not covered" >step(generator.next(value)); </span>} catch (e) { <span class="cstat-no" title="statement not covered" >reject(e); </span>} </span>}
+        function <span class="fstat-no" title="function not covered" >rejected(</span>value) { <span class="cstat-no" title="statement not covered" >try { <span class="cstat-no" title="statement not covered" >step(generator["throw"](value)); </span>} catch (e) { <span class="cstat-no" title="statement not covered" >reject(e); </span>} </span>}
+        function <span class="fstat-no" title="function not covered" >step(</span>result) { <span class="cstat-no" title="statement not covered" >result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); </span>}
+<span class="cstat-no" title="statement not covered" >        step((generator = generator.apply(thisArg, _arguments || [])).next());</span>
+    });
+};
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "__esModule", { value: true });</span>
+const React = <span class="cstat-no" title="statement not covered" >require("react");</span>
+const react_native_qr_scanner_1 = <span class="cstat-no" title="statement not covered" >require("react-native-qr-scanner");</span>
+const T = <span class="cstat-no" title="statement not covered" >require("prop-types");</span>
+const react_native_1 = <span class="cstat-no" title="statement not covered" >require("react-native");</span>
+const ImagePicker_1 = <span class="cstat-no" title="statement not covered" >require("../ImagePicker");</span>
+const utils_1 = <span class="cstat-no" title="statement not covered" >require("../../../../utils");</span>
+const Scanner = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span> onSuccess, onClose, hideAlbum = <span class="branch-0 cbranch-no" title="branch not covered" >false,</span> type }) =&gt; {</span>
+    const _onSuccess = <span class="cstat-no" title="statement not covered" >React.useCallback(<span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; {</span>
+        const { data = <span class="branch-0 cbranch-no" title="branch not covered" >'' </span>} = <span class="cstat-no" title="statement not covered" >value;</span>
+<span class="cstat-no" title="statement not covered" >        onSuccess === null || onSuccess === void 0 ? void 0 : onSuccess(data);</span>
+    }, [onSuccess]);
+    const _onClose = <span class="cstat-no" title="statement not covered" >React.useCallback(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        onClose();</span>
+    }, [onClose]);
+    const _onPickAlbum = <span class="cstat-no" title="statement not covered" >React.useCallback(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >__awaiter(void 0, void 0, void 0, <span class="fstat-no" title="function not covered" >fu</span>nction* () {</span></span>
+        const count = <span class="cstat-no" title="statement not covered" >1;</span>
+        const options = <span class="cstat-no" title="statement not covered" >{</span>
+            title: 'Select Image',
+            multiple: false,
+            mediaType: 'photo',
+            maxFiles: count,
+        };
+<span class="cstat-no" title="statement not covered" >        try {</span>
+            const response = <span class="cstat-no" title="statement not covered" >yield ImagePicker_1.default.openPicker(options);</span>
+<span class="cstat-no" title="statement not covered" >            if (response) {</span>
+                const data = <span class="cstat-no" title="statement not covered" >yield react_native_qr_scanner_1.QRreader(response.path.replace('file://', ''));</span>
+<span class="cstat-no" title="statement not covered" >                onSuccess === null || onSuccess === void 0 ? void 0 : onSuccess(data);</span>
+            }
+        }
+        catch (e) {
+<span class="cstat-no" title="statement not covered" >            react_native_1.Alert.alert('', 'No QR code found');</span>
+        }
+    }), [onSuccess]);
+<span class="cstat-no" title="statement not covered" >    return (React.createElement(react_native_1.View, { style: styles.container },</span>
+        React.createElement(react_native_qr_scanner_1.QRscanner
+        // eslint-disable-next-line react-native/no-inline-styles
+        , { 
+            // eslint-disable-next-line react-native/no-inline-styles
+            hintTextStyle: {
+                color: '#ffffff',
+                fontSize: 16,
+                textAlign: 'center',
+                fontFamily: window.ENABLE_INTER_FONT ? 'Inter' : 'System',
+                fontWeight: '500',
+                backgroundColor: 'transparent',
+            }, hintText: "Di chuy\u1EC3n camera t\u1EDBi m\u00E3 QR", zoom: 0, hintTextPosition: 100, onRead: _onSuccess, rectWidth: 312, rectHeight: 312, cornerColor: "#ffffff", cornerBorderLength: 156, cornerBorderWidth: 1, scanBarMargin: 16, scanBarHeight: 2, isCornerOffset: false, scanBarColor: "#1A94FF", renderBottomView: <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                if (!hideAlbum) {</span>
+<span class="cstat-no" title="statement not covered" >                    return (React.createElement(react_native_1.View, { style: styles.bottomView },</span>
+                        React.createElement(react_native_1.TouchableHighlight, { style: styles.albumButton, onPress: _onPickAlbum },
+                            React.createElement(react_native_1.Image, { style: styles.closeImage, source: {
+                                    uri: 'data:image/png;base64,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',
+                                } }))));
+                }
+<span class="cstat-no" title="statement not covered" >                return null;</span>
+            } }),
+        React.createElement(react_native_1.TouchableHighlight, { style: styles.closeButton, onPress: _onClose },
+            React.createElement(react_native_1.SafeAreaView, null,
+                React.createElement(react_native_1.Image, { style: styles.closeImage, source: {
+                        uri: 'data:image/png;base64,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',
+                    } })))));
+};
+const styles = <span class="cstat-no" title="statement not covered" >react_native_1.StyleSheet.create({</span>
+    container: {
+        flex: 1,
+        flexDirection: 'row',
+    },
+    closeButton: {
+        position: 'absolute',
+        top: 10 + utils_1.getStatusBarHeight(true),
+        left: 20,
+    },
+    closeImage: {
+        marginLeft: 0,
+        height: 32,
+        width: 32,
+    },
+    bottomView: {
+        flex: 1,
+        backgroundColor: '#0000004D',
+    },
+    albumButton: {
+        position: 'absolute',
+        bottom: 32,
+        right: 16,
+    },
+    albumImage: {
+        height: 40,
+        width: 40,
+    },
+});
+<span class="cstat-no" title="statement not covered" >Scanner.propTypes = {</span>
+    type: T.string,
+    onSuccess: T.func,
+    onClose: T.func,
+};
+<span class="cstat-no" title="statement not covered" >exports.default = Scanner;</span>
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Thu Feb 17 2022 10:04:59 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../../../sorter.js"></script>
+        <script src="../../../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

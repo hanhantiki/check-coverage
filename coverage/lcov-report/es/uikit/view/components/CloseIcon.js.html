@@ -1,0 +1,161 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for es/uikit/view/components/CloseIcon.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">es/uikit/view/components</a> CloseIcon.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">27.27% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>6/22</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">11.76% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/17</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">33.33% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>6/18</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var __rest = (this &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.__rest)</span> || <span class="fstat-no" title="function not covered" >fu</span>nction (s, e) {
+    var t = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >    for (var p in s) <span class="cstat-no" title="statement not covered" >if (Object.prototype.hasOwnProperty.call(s, p) &amp;&amp; e.indexOf(p) &lt; 0)</span></span>
+<span class="cstat-no" title="statement not covered" >        t[p] = s[p];</span>
+<span class="cstat-no" title="statement not covered" >    if (s != null &amp;&amp; typeof Object.getOwnPropertySymbols === "function")</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = <span class="cstat-no" title="statement not covered" >0,</span> p = <span class="cstat-no" title="statement not covered" >Object.getOwnPropertySymbols(s);</span> i &lt; p.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            if (e.indexOf(p[i]) &lt; 0 &amp;&amp; Object.prototype.propertyIsEnumerable.call(s, p[i]))</span>
+<span class="cstat-no" title="statement not covered" >                t[p[i]] = s[p[i]];</span>
+        }
+<span class="cstat-no" title="statement not covered" >    return t;</span>
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = require("react");
+const react_native_1 = require("react-native");
+const CloseIcon = <span class="fstat-no" title="function not covered" >(_</span>a) =&gt; {
+    var { theme } = <span class="cstat-no" title="statement not covered" >_a,</span> rest = <span class="cstat-no" title="statement not covered" >__rest(_a, ["theme"]);</span>
+<span class="cstat-no" title="statement not covered" >    if (theme === 'light') {</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement(react_native_1.Image, Object.assign({}, rest, { source: {</span>
+                uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK1SURBVHgB7VmLjdswDGU6gUfwBvUI3sTqBLkN6g0uGzgbtBskG6Q3gdoJ0g1YClEAgyYlytblijYPIILYJMWffjTAE0/839hBJSBiTz+ficJvR9RECvhN9DPSG9F5t9ud4aNBRjdEX4muWA5PNBG18GhEw1+xHqaHOUID7XFdxHPwRAO8JzAd9WuMpCPqiJqZXBOfhXdHTAfgFWojGnBKRG4/N9io00VZCZdSfbnBLihH/AU2IuhAOSMnqAGUy8ZjxUkXdKGcjW3lFNMspbeFyohOSJlel2UlKlUjbxwzlFf5fMDbasEVtfDOiE5cN5VSVGJKJT3viUairkD/XWZQ3r8I49uzIETfK3x8jmQ3osDDZHqFzzO+EawQhLVIjctA6U4IxquG4TILVzAa31sFBV7VCcX4gE7RHTZPPhd6MDjAozpl+F3OiYTxLqObl3J+SSWmb5oha5zAlcYrer+DQYhvJqbVJeHEKuOjzo7JeYsQrzvz8mV0whXoa5hsfiLz0aAQGSccFCJnzyeoD1z5rtLo20powDzMt661JeSZkHUSD2iHyQlcTuIL55FK6Af7n3UgGnQUXn2JxHE0OsHH/pWVwOUWntvIBiXKbsaT3ewU3XwjG8HgwOIogco8EFK8MN7gRJ+wpfwooQhqR+nRYnzGidHIm9/EEoZpx+neanzCMO2k6xnfBFbgcvlKZcFFh3swAm+lp8rgrU3D0UIJSODAFHzkldIe/Zki6Tzu8fGX+vVjonw3fXRbZVu/VCil6plAvbF1gBpAuS9aq7WodbsvUAt4mw9Seu/ZKEpz1LdHvbl7wprN3dnAB9Rxb68PmG6vT5hur9cpm4QTLhG5LahSklYnwqQ7Yj2EzNYvmQJHPJYjRHzcanjtz6yBwqfWNtL8M2ugcNc4E739FZ9Zn3jiH8AfTI5hgvgNQHoAAAAASUVORK5CYII=',
+            } })));
+    }
+<span class="cstat-no" title="statement not covered" >    return (React.createElement(react_native_1.Image, Object.assign({}, rest, { source: {</span>
+            uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVhSURBVHgB7Vk/UxtHFH978sFETiEGyZNyXSBdZM+gdE6F6JLK8iew/AnAnwC5SyqjbyC6pDJ0doXo0iEK25KIh0uXmcBEKaIgZG7zHifB3d7u/ZGOyvxmQHd7++f9dt97+/YtwB3u8GWDQUqwrMdVIWAVwKniawW7zgGI3GSYgRDCZgxsrHNkGE672+22IQXMRYBznltYyG4wxjZvhI0NItNGMq+QjA0zYiYCJPji4v0tFHoTUgASac1KJAMJUSo93rh3z9zFYauQElC1SOVqy8sPBmdnfx0lapukcqn06HXIrKOew65hwAH+dYbDoY0Y0AdasWw2yx3HqTgOq6LKPcVijcqx7V7v/UtIk8BEZd6oZ13Y+G97NPpvZypwHFiWVReCoRoyHuhRQOfiYrgep79YBIrF8qG7zD5g5+JVr/dxG+ZAqfQtrqixFXQCrI0rsR7VPtIGSG1Q+Jq/lFyi+L7X676FOXF2dvpbobD8Kz7WXNd7DZ7PP8ihTbwLax9KwLLKdfz5yVuG/rxjGOLHeVyfjNPT00GhkN9DlUL7gG88n57k8/l/iKSurVaFUEe5EMY+PvKb0quZX09T+OCYbF+yi8FoNHyoswdD1xl6iwb4hIfBbQpPoL5pDNq5PcWTPUcN5QpMZv/EXypeqgyWQgh0jxhGjHePj487EAPTNjj8Sb//fkf+7ho2e+0tw1VYUq2CcgUms+8V3lYLX0ZX6Oyj3m4ZhnlYLFrPIQLF4qPn0zY42y2crKpcxx3ryj1fA0MW5f6jJIAbzZr3HQ23oarnOD4Vw3ZGK4wECU9C+/swquraRtPfN2woa8kFkxnhnqJBv9/dUTbGqFIu05FQCU8g1QMFRiOzJduCarUCBOQZofAANKCQmDHnhVwuk9AJj7P6Qmc3tt3B0MTZ88vCKpEEsNqq/z04y14giVYYiTDhu90PrbC+DYO1pVbVQJ1gM8a9b0JcRkaHYSRmFZ5weTmWV2dVrmMEO2fc+z4ej22IAR2JYP/xhHfHvm9LRYEIVqVCvkpJIswoEkmEd8fuyGPHITAfHCcj9N8cASlDZQM+1nQWgJjQGex1zxH7hAzOK/LYcXZi4atkmiaHGIgSfookJEzzXy4V2XKdAAEKl6VuAr5XRpirjLNP6JDJBMb+Q66j8ELGgSTEGoQgys9H7RNhfaPJVL3vdNSU6ygIXHYkQWo6OyiXy5U4fj6MhCo88Hx/6hNWEboECLgZMzke/6oOCnz+LB819a5SR0IXzLmnQa9LF7Yqm6d0o2gHTUksdSQozUiUn1eTcE5AKQNs+d/lsGIypqqQ3Nfi4sXfUpeaA41Vx1nkSfKdKysrqHpmTdeGkmdIzDcWEn+oOg1qz8SlUpk68M48Himd727zSElwT4OZQ6/6UOqx3/+g3OG1O/FotNCQbYEO+TQA3BJuEgl+3ae8qa6NNq0yGPx5jimNEZL4wVOco9QH5nHeUSoEUgQJj6r4Bu3I8pajPW5i/ulA1y40L0T5mHy+sISPT6Zlbt6G1ZDEXlokpjMvC4/iN/E0+HNY28jMHGbG3uJKVKVzAi4xq9MKhSWd4sA1WPYLPnoTWlcRQb//8VlU+5jJ3QpeZFzsK/KjBLyoYA1VekTfHyWLv8Zd2KFMAw/WEG1MFj9LLbk7hcIzebuia6RdSsri79F47E+vm2aWZzKA6XVYw0NTTX+jI5rorjchJhLf0ISlxefETNnuxDc0aLgdNxELSziTkZFqPIgmqcynT7+3ISHmuuRzXR9ruBEr45AMuDFC8/x8uJ3k2CojxWtWq0qBGQq1iqvD8ZfDzRl2MPnrkIFiBHuU1jXrHe7wpeN/VgK7OYO/fAUAAAAASUVORK5CYII=',
+        } })));
+};
+exports.default = CloseIcon;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Wed Feb 16 2022 14:31:55 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

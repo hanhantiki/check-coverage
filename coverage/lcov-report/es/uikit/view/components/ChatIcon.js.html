@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for es/uikit/view/components/ChatIcon.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">es/uikit/view/components</a> ChatIcon.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.71% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>6/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>6/6</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = require("react");
+const react_native_1 = require("react-native");
+const ChatIcon = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; (<span class="cstat-no" title="statement not covered" >React.createElement(react_native_1.Image, Object.assign({}, props, { style: [styles.image, props.style], source: {</span>
+        uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQ4SURBVHgB7ZtRThtJEIb/6gFntSTIOUGcA6wgJ8A87hqy5mGlhGWFOcFmT4A5QZITxFnFLG8migj7FvK2b2uUAzC5wSgmEmE8U+k2ICGHnunx2I5n3N8DttQ1I+Z3VXd1VQ9gsVgsFovFYrHcAGHMzP12sIhbWKIwvE9w7oF48XKo1Gfqyn/OY5DHHByzECfUDY9P91aPMEZGLlCx1ir63cKmYKr2xGAUkQaCB6a2/NbwZ7+8P2usuRghIxPo9qM3ZXKcbYDLGCVM++Duy84/D/cxAoYu0J31g5q8qxTmm5AZNa58nHqn+ctLDJGhCXThMeIFxi9MPy4cPOn8XXmNIZBaIDXHBP7sM3mrTUwWco4630k7R6USaIK8RocrRVpOI5LAgMxv/PunFOcdJlccRWnWL5zMP377BAMykEDzG4fbMjd5hozAgp/Orx9uYwAcJORCnLCOrEFc/uGnP/DlQ/N9osuSGKuwypLn3AzVkqQCxgLN1Q4WhY//kX28kLH8ebfSNjE2moOKtcOSFKeFfFAUhJZKT0yMjQQK/KCOyV6tklIK/VtGk3ZsiCnvCfzwBDlEhtqDuFCL9aDA5xfIKYLoaZxNpAfNrcuJmXIxMWuJ86JIDxLEA2egWYEQ1qLGY0KMfkXOIRKRm2ytQLc33pTlR7rqXzYoqk23blDvQSHKmBKYaFE3phWIyFnClCBXswXtmG6AEU5DeF1A+mjRexCohOlB6wxikItyyEACWRAtkAeLFegSVzegX8UYRgWlPMBgVzcW4UHhR0wLzMe6Ib1AAiPpdU8iNNNrX92IVqCZma4KsamYhxxxru10aAXyGmuebO8M9SDAhNJQz6objM6DpiDMOIh2gtia9J3f374b+Rmf7wXD7exW7keZxGbSTMEO8gpRPc4kVqDTV6tHTOFz5I+GSYfVaC8mV7S6ckfkB88Pzo0iw0ig3oomwi3khBC8c7ZndmbIeDevQk3e+C9kHJm6PP/cXDE+gJHo+Iv/Yfe/wsJjksW0MjKI3HO1T3dX15Jck7geJD2pLiftTK5s8odNXAQcqGCmRMpouCUWKNUhzl5rGmjJu5SQEZzZ87tRW4t+UpVcVU/bCcWyjO7M7NnOzpJ5UeqatLf3s9tprtRAwVoWcqXZQmEhif3QivadVw/3e/saxtYkCxV2g7tJ7Ife1ZAiNa6EksvqESaMpP2+kbV9lFCnzZVlJxDXxfruBTiCuJfMfsyoUyMMsaBeqMNFT7x4mZ+U+kxd9YcJbWJ4ofwUCD6CRTXVeyGM1/LHq5qaj12gYVB8dFgKRFiWX7eTphjygdufmpUHCeyzjfJIYqpdHvYyWcK9TrNiPFFnXqAritVWMfixUGXizbi9ohTI+LlzI9B1eiHoBLKGRUv9IagWC7V4mN4rlwJdR70ieuVVSpxu4G+Z1oIsFovFYrFYppmva6B5n3Deg0YAAAAASUVORK5CYII=',
+    } })));
+const styles = react_native_1.StyleSheet.create({
+    image: { width: 24, height: 24 },
+});
+exports.default = ChatIcon;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Wed Feb 16 2022 14:31:55 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

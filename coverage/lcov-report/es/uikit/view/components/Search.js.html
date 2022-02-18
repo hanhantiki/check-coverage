@@ -1,0 +1,203 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for es/uikit/view/components/Search.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">es/uikit/view/components</a> Search.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">70% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>14/20</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">57.14% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">40% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>2/5</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">72.22% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>13/18</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = require("react");
+const react_native_1 = require("react-native");
+const utils_1 = require("../../../utils/utils");
+const Input_1 = require("./Input");
+const Icon = ({ onPress, uri, opacity = 1, }) =&gt; (React.createElement(react_native_1.TouchableOpacity, { activeOpacity: opacity, style: styles.icon, onPress: onPress },
+    React.createElement(react_native_1.Image, { style: styles.image, source: { uri } })));
+const Search = ({ debounceTime = 50, placeholder = '', onChangeText, }) =&gt; {
+    const [text, setText] = React.useState('');
+    const debounceSearch = utils_1.debounce(<span class="fstat-no" title="function not covered" >(v</span>al) =&gt; {
+<span class="cstat-no" title="statement not covered" >        onChangeText(val);</span>
+    }, debounceTime);
+    const onSearch = <span class="fstat-no" title="function not covered" >(v</span>al) =&gt; {
+<span class="cstat-no" title="statement not covered" >        setText(val);</span>
+<span class="cstat-no" title="statement not covered" >        if (debounceTime) {</span>
+<span class="cstat-no" title="statement not covered" >            debounceSearch(val);</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            onChangeText(val);</span>
+        }
+    };
+    return (React.createElement(Input_1.default, { onChangeText: onSearch, value: text, style: styles.container, placeholder: placeholder, leftIcon: React.createElement(Icon, { uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUDSURBVHgB7ZvNbtw2EMeHu1vY/QDqvoFy683OE1RGm16THnvK5gnsHhonLQpRhyZd91D7Cbx5Aju3Am1R5QniPEGUN/ApiWHvMsOlAtsBR6LEkVZw+AMEY0lhxf1rOBxyxgCBQCAQCAQCgYAFAR0hpVwDWLkDMFjHjxFeG/h4bFNrl27LsQ0vdQwwf4GfMykf5rBEWhVIiyLE51tKqRh/dAzN0GLtw5LEakWgS8Jsf2AhnogpwCztUih2gdL0z4RfmKsIMZBJ8nMKHcAmkJSPI/Qvh7DwLZ2Q49TbbNuaBsBAmk7uAgyfQ3fiaCIc/nMpH92BFvG2IBQHpxRIx9tzfOtPYeF4IQM4PUF/daI7zCr3WYRTE695jD/+NpjVrpI2p5yXQO7iqCleT3A6ZFADKXfRImfozwZ3q+5tS6TGAhnTHh6W36UyvO75+gnj3/SLKBdKCBgnyc4TYKSRQGbA2udQK5U4wZUsTdOdPWAkSR5tCzFKSlZInK7zm5yOu6GTHvxfMsgcr01ucTRp+gt+5+xm8Qwba8VKykZtgbTfAdp55mbpvX8MLWGsY74JtEgbUk4kMFFrihWxzkviq0702+0qyjUOHChLxrG8ufF+hfShpgUNE6pH+5wutwDaSpU6p1YtFO3TbWDA2YLKrUdNpXxwD5aAlH+gFYnY0sViRXUsKKa7VCf7IuLZ1IthsaIaAg227O3aepZ3ZlM4bSL2Ed+AJ04CFYEasc+a7cPymdqbVWy2MM1xtaCYaM+l/LW1Jd2VYguT23tXvDazjgIJwnrUU+gN1FiE1wmDqwWt25tFBr1BUZYcgQeuFhTZ289z6A+ZvVmsgweuFhTZm89y6A2rVLzTiZO2whHKcyHlT/0T6GPA1QdZ345vjMGJlH+1MhZHgZRVoNHoiy+hN7yOiI4cPHCdYtYl9Pz8bBN6wyiyt+tUdnNcLeiVvd0vCOOFSm0vcvyNcRWICMLEbegN1FiU11bIUaDVI6Ijwo1sDEtGyt+1JUdEdwYeOO7mdYyhUzg2hpU5q/b5hDiKEce+RzE14iD1jGgfF8chS8E8W43tvf5HMTUEWt2j4iG0ogNYGvQ5OXhOL42zQGaaUW9ExUkyYTkkr0Oa7m7R1sNz0llzq0FbEaZ9k8JZdoKeWuV1ATzn5LUEKrcivSkcHXbhj4oMS1l2ly0F1TA3PymrBcrbLGwyCUOl08sRcQseA+/cACYa7ubnP9AO2xQ2teGTjM/R2dSyU8I56/bHo/zl8RiFqFi9eIoui2qSA7dKWYHO+T5bEtOrgAoHLlGkpPpOLdTZft0MiInSdSBKrVT087hE8i7BcxdpQY4XbltmGHSqXB/ZXi3BW9FONy6KzXW6JoLG8IjEUuWKTht/jDhos/S3Gf4isRy54qpxVFHY1Aa6Al+vViUld3obtOsV5bMXkteccg1Y1CGhP3soL545meKfkk1zc0saAjNZ9l8Wx9/iW1Vf8R6oaWHmE4C3P0r5299Xn/nvURzf0tZEPW8jjr+Psuyf2plgdgu6TBFVx0VlSEOxFpWy6NRP96rSTG1YUqsCXeZCrMW/Qa0X2dro4g5tIYvkgPYtr8zf06O6uTdukToTqEs4RWL3QX3AzSfdEnhfBhVc28wqhh5jKA0BYAscuNapZweRKrn2uXlaJOUk3LX0QR9ifNJ3GJcNvkYH/VbHUxhoPoBAIBAIBAKBQKAp7wCizO1oMpf5YAAAAABJRU5ErkJggg==" }), rightIcon: `${text}`.length &gt; 0 ? (<span class="branch-0 cbranch-no" title="branch not covered" >React.createElement(Icon, { onPress: <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >onSearch(''),</span> opacity: 0.75, uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAItSURBVHgB7do9TsNAEIbhMTS03AA6ypSUFMA1SElHKBChYimBAnECkhtADUi+ArehAbOjBMRP7Kw9OzMW+h4pSoQtYr2KrXiyRAAAAAAAAAAA/0pBQhcX1+dVVY3m/24SwskxOcp9PKskEMLlDVE1ji/XZo9qe2dnf6MsHx/IQQhXd/EYRj+PZ68oy6eSOlohkWL492/VcHagtuZxhgs2HZGAMFAd20gNccSEgd5u67fZRFoep5qSgOgaVJbPZTzHN+PLQc0uA81rUsInZxrC+JAERIFYvADee0RKi3PatD2JOBCzjmQVh2UJxKwiWcZh2QIx7UjWcVjWQEwrkkcclj0Qyx3JKw5TCcRyRfKMw9QCMWkk7zhMNRDrGqkPcZh6INY2Ul/iMPE8qI04HpnEp4P6PYrJ7LkfcZhpILY8UiPTOMzkFPsu4XSrYx6HmQdiHSK5xGEugViLSG5xmNJEMVVR5dlHj9snqMWYdOD5Q4BLoA4zZLdI5oEEA3aXSKaBUr4hx8cLOc24FzELlHr74DXjrmMSqO29VZ8iqQfqeuPZl0iqgaR35X2IpBYo18jCO5JKoNzzHM9I2QNpDbu8ImUNpD0J9IiULZDVmNQ6UpZA1jNky0jiQF4DdqtIGdYoUtP6G9VhV1qk3q1R/GIyCZy/R9Mqsj6uUbQdkyZE6kxjjaLLDLk+kvsaxd312Hkrnm6vRO+XIYxH5GR2Tfp9PGdjAgAAAAAAAACATx/9q+Ecrw+IkQAAAABJRU5ErkJggg==" }))</span> : undefined }));
+};
+const styles = react_native_1.StyleSheet.create({
+    container: {
+        backgroundColor: '#FFF',
+        paddingHorizontal: 8,
+    },
+    icon: {
+        width: 32,
+        height: 32,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    image: {
+        width: 24,
+        height: 24,
+    },
+});
+exports.default = Search;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Wed Feb 16 2022 14:31:55 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

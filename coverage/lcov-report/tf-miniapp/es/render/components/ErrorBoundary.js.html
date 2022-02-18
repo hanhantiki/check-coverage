@@ -1,0 +1,404 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for tf-miniapp/es/render/components/ErrorBoundary.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">tf-miniapp/es/render/components</a> ErrorBoundary.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/38</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/16</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/9</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/38</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "__esModule", { value: true });</span>
+<span class="cstat-no" title="statement not covered" >exports.ErrorBoundary = void 0;</span>
+const React = <span class="cstat-no" title="statement not covered" >require("react");</span>
+const PageComponent_1 = <span class="cstat-no" title="statement not covered" >require("../PageComponent");</span>
+const sentry_1 = <span class="cstat-no" title="statement not covered" >require("../../analytic/sentry");</span>
+const ErrorIcon = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "260", height: "260", fill: "none", viewBox: "0 0 260 260" },</span>
+        React.createElement("path", { fill: "#F5F5FA", d: "M130 260c71.797 0 130-58.203 130-130S201.797 0 130 0 0 58.203 0 130s58.203 130 130 130z" }),
+        React.createElement("path", { fill: "#BBF2FF", d: "M130.08 233.871c25.009 0 45.284-1.538 45.284-3.436 0-1.897-20.275-3.435-45.284-3.435-25.01 0-45.284 1.538-45.284 3.435 0 1.898 20.274 3.436 45.284 3.436z" }),
+        React.createElement("path", { fill: "#FFC400", d: "M152.715 156.063c22.86 41.357 18.348 57.148 18.348 57.148-9.174-5.264-24.363 10.076-35.041 5.113-17.295-8.121-21.506.451-41.056-3.008-10.076-1.804-13.987-5.263-13.987-5.263 20.453-24.213 29.477-52.035 29.477-52.035s29.476-24.965 42.259-1.955z" }),
+        React.createElement("path", { fill: "#1BA8FF", d: "M127.149 225.543c.15-.602 1.955-29.627.15-30.379-1.804-.752-27.822-5.564-27.822-5.564s8.272 30.98 11.43 34.589c0 0 3.609 5.715 8.722 5.715 2.106.301 6.317.15 7.52-4.361z" }),
+        React.createElement("path", { fill: "#008AE8", d: "M127.299 199.375c-1.804-.602-24.212-4.813-24.212-4.813s4.06 5.264 4.06 5.715l20.604 12.182c.3-6.768.3-12.783-.452-13.084z" }),
+        React.createElement("path", { fill: "#1BA8FF", d: "M134.668 225.543c-.15-.602-1.955-29.627-.15-30.379 1.805-.752 27.221-5.414 27.221-5.414s-7.67 30.83-10.678 34.439c0 0-3.609 5.715-8.723 5.715-2.256.301-6.466.15-7.67-4.361z" }),
+        React.createElement("path", { fill: "#008AE8", d: "M134.518 199.375c1.805-.602 24.213-4.813 24.213-4.813s-4.061 5.264-4.061 5.715l-20.603 12.182c-.301-6.768-.301-12.783.451-13.084z" }),
+        React.createElement("path", { fill: "#1BA8FF", d: "M104.891 150.198s-18.648 44.816 5.865 53.538c24.514 8.723 46.471-1.203 49.779-9.173 3.309-8.121 1.504-43.313-3.459-45.117-4.812-1.955-47.072-2.858-52.185.752z" }),
+        React.createElement("path", { fill: "#fff", d: "M133.465 191.705c-21.806 0-34.59-3.459-35.341-3.609l.902-3.008c.3 0 24.664 6.617 63.164 1.654l.451 3.158a237.77 237.77 0 01-29.176 1.805z" }),
+        React.createElement("path", { fill: "#008AE8", d: "M98.424 175.914s19.401 9.324 2.256 18.649c0 0-2.556-4.662-2.406-10.076.15.15-4.512-9.625.15-8.573z" }),
+        React.createElement("path", { fill: "#1BA8FF", d: "M104.29 157.416s-25.567 4.512-25.567 18.348c0 9.174 17.596 15.34 20.754 15.34 2.557 0 7.369-2.256 6.918-5.866-.902-7.67-11.73-11.73-11.73-11.73l8.722-4.061.903-12.031z" }),
+        React.createElement("path", { fill: "#008AE8", d: "M162.791 175.914s-19.4 9.324-2.256 18.649c0 0 2.557-4.662 2.407-10.076 0 .15 4.511-9.625-.151-8.573z" }),
+        React.createElement("path", { fill: "#1BA8FF", d: "M160.385 157.416s21.055 4.963 22.107 18.348c.752 9.174-17.595 15.34-20.753 15.34-2.557 0-7.37-2.256-6.918-5.866.902-7.67 11.73-11.73 11.73-11.73l-8.723-4.061 2.557-12.031z" }),
+        React.createElement("path", { fill: "#008AE8", d: "M99.026 171.403l-4.812 2.255s1.804.752 4.21 2.256c.301-1.654.452-3.158.602-4.511zM161.588 170.801l5.715 2.707s-2.707 1.203-5.264 2.707c0-1.805 0-3.91-.451-5.414z" }),
+        React.createElement("path", { fill: "url(#paint0_linear)", d: "M198.734 95.004c1.053 37.147-28.874 67.977-66.773 69.18-37.748 1.203-69.179-27.822-69.93-64.969-1.054-37.146 28.874-67.976 66.772-69.179 37.598-1.203 69.029 27.822 69.931 64.968z" }),
+        React.createElement("path", { fill: "#008AE8", d: "M134.819 162.379c-37.598 1.203-69.03-27.822-69.931-64.968-.602-23.912 11.58-45.117 30.228-57.6-20.453 12.182-33.838 34.44-33.086 59.405.902 37.146 32.334 66.171 69.931 64.968 13.987-.451 26.77-4.963 37.447-12.332-9.925 6.316-21.806 10.076-34.589 10.527z" }),
+        React.createElement("path", { fill: "url(#paint1_linear)", d: "M154.52 47.632c4.963 2.255 17.746 9.775 23.31 20.453.752 1.654 2.557 1.955 4.211 1.052 1.354-.752 1.655-2.256 1.203-3.61-2.406-5.263-9.625-18.046-26.318-23.61-1.654-.602-3.76.601-4.06 2.406v.3c-.301 1.204.451 2.257 1.654 3.009z" }),
+        React.createElement("path", { fill: "#BBF2FF", d: "M146.248 45.225c1.805.301 3.459-.902 3.76-3.007.301-1.805-.902-3.46-3.008-3.76-1.804-.3-3.459.902-3.759 3.008-.151 1.804 1.203 3.459 3.007 3.76z" }),
+        React.createElement("path", { fill: "#fff", fillRule: "evenodd", d: "M137.376 153.957c30.529-3.158 52.636-30.378 49.478-60.907-.602-5.264-1.805-10.227-3.61-14.89-15.49 3.61-33.085 6.768-52.786 8.874-19.551 2.105-37.598 2.556-53.389 2.256-1.353 6.015-1.053 11.129-.601 15.339 3.007 30.379 30.529 52.487 60.908 49.328z", clipRule: "evenodd" }),
+        React.createElement("path", { fill: "#fff", d: "M130.457 193.209c2.824 0 5.114-1.481 5.114-3.309 0-1.827-2.29-3.308-5.114-3.308-2.823 0-5.113 1.481-5.113 3.308 0 1.828 2.29 3.309 5.113 3.309z" }),
+        React.createElement("path", { fill: "#BBF2FF", fillRule: "evenodd", d: "M89.23 71.785c0 8.589-7.027 15.615-15.615 15.615C65.027 87.4 58 80.374 58 71.785 58 63.197 73.615 29 73.615 29S89.23 63.197 89.23 71.785z", clipRule: "evenodd" }),
+        React.createElement("path", { fill: "#1BA8FF", fillRule: "evenodd", d: "M73.615 29s-.625 1.25-1.561 3.435c1.561 3.592 13.74 30.606 13.74 37.789 0 7.651-6.245 13.897-13.897 13.897-7.339 0-13.429-5.777-13.897-13.117v.781C58 80.374 65.027 87.4 73.615 87.4c8.588 0 15.615-7.026 15.615-15.615C89.23 63.197 73.615 29 73.615 29z", clipRule: "evenodd", opacity: "0.2" }),
+        React.createElement("path", { fill: "#fff", d: "M66.276 76.626a5.153 5.153 0 100-10.306 5.153 5.153 0 000 10.306z" }),
+        React.createElement("defs", null,
+            React.createElement("linearGradient", { id: "paint0_linear", x1: "102.866", x2: "157.944", y1: "158.826", y2: "35.429", gradientUnits: "userSpaceOnUse" },
+                React.createElement("stop", { stopColor: "#1BA8FF" }),
+                React.createElement("stop", { offset: "0.999", stopColor: "#4ACAFF" })),
+            React.createElement("linearGradient", { id: "paint1_linear", x1: "182.702", x2: "155.258", y1: "68.493", y2: "41.05", gradientUnits: "userSpaceOnUse" },
+                React.createElement("stop", { stopColor: "#E1FFFC", stopOpacity: "0" }),
+                React.createElement("stop", { offset: "1", stopColor: "#BBF2FF" })))));
+};
+class ErrorBoundary extends React.Component {
+<span class="fstat-no" title="function not covered" >    st</span>atic getDerivedStateFromError() {
+<span class="cstat-no" title="statement not covered" >        return { errorMessage: 'An error has occurred. Please check the console.   ' };</span>
+    }
+<span class="fstat-no" title="function not covered" >    co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >        super(props);</span>
+<span class="cstat-no" title="statement not covered" >        this.state = {</span>
+            errorMessage: undefined,
+        };
+    }
+<span class="fstat-no" title="function not covered" >    on</span>Close() {
+<span class="cstat-no" title="statement not covered" >        if (window.parent.IDE) {</span>
+<span class="cstat-no" title="statement not covered" >            window.parent.IDE.refreshSimulator();</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        window.__KERNEL_PORT__.postMessage(JSON.stringify({ $event: '$_CLOSE_APP_$' }));</span>
+    }
+<span class="fstat-no" title="function not covered" >    on</span>Reload() {
+<span class="cstat-no" title="statement not covered" >        if (window.parent.IDE) {</span>
+<span class="cstat-no" title="statement not covered" >            window.parent.IDE.refreshSimulator();</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        window.__KERNEL_PORT__.postMessage(JSON.stringify({ $event: '$_RELOAD_APP_$' }));</span>
+    }
+<span class="fstat-no" title="function not covered" >    co</span>mponentDidCatch(error, errorInfo) {
+        let { message: errorMessage = <span class="branch-0 cbranch-no" title="branch not covered" >'' </span>} = <span class="cstat-no" title="statement not covered" >error;</span>
+<span class="cstat-no" title="statement not covered" >        if (errorMessage.indexOf('Minified React error')) {</span>
+<span class="cstat-no" title="statement not covered" >            errorMessage = '';</span>
+        }
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >            sentry_1.default.captureException(error);</span>
+        }
+        catch (e) { }
+        const { componentStack = <span class="branch-0 cbranch-no" title="branch not covered" >'' </span>} = <span class="cstat-no" title="statement not covered" >errorInfo;</span>
+        const errorStatck = <span class="cstat-no" title="statement not covered" >componentStack</span>
+            .split('\n')
+            .map(<span class="fstat-no" title="function not covered" >(m</span>sg) =&gt; {
+            const matches = <span class="cstat-no" title="statement not covered" >msg.match(/^\s+at\s+([^\s]+)/);</span>
+<span class="cstat-no" title="statement not covered" >            if (matches &amp;&amp; matches.length &gt; 0) {</span>
+                const [, viewName] = <span class="cstat-no" title="statement not covered" >matches;</span>
+<span class="cstat-no" title="statement not covered" >                if (!['View', 'div', 'ErrorBoundary', 'PressableComponent', 'UserPageProvider'].includes(viewName)) {</span>
+                    // TODO: put path name here
+<span class="cstat-no" title="statement not covered" >                    return msg</span>
+                        .replace('PageComponent', '/pages/index/index')
+                        .replace(/TFApp\(([^s]+)\)/g, <span class="fstat-no" title="function not covered" >(_</span>, p1) =&gt; <span class="cstat-no" title="statement not covered" >p1)</span>;
+                }
+            }
+        })
+            .filter(Boolean)
+            .join('\n');
+<span class="cstat-no" title="statement not covered" >        errorMessage = `${errorMessage}\nPlease check your txml:\n${errorStatck}`;</span>
+<span class="cstat-no" title="statement not covered" >        PageComponent_1.getCurrentPageComponent().sendToWorkerConsole('warn', errorMessage);</span>
+    }
+<span class="fstat-no" title="function not covered" >    re</span>nder() {
+        const { errorMessage } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+<span class="cstat-no" title="statement not covered" >        if (errorMessage) {</span>
+<span class="cstat-no" title="statement not covered" >            return (React.createElement(React.Fragment, null,</span>
+                React.createElement("div", { className: "page-error" },
+                    React.createElement("div", { className: "page-error-icon" },
+                        React.createElement(ErrorIcon, null)),
+                    React.createElement("div", { className: "page-error-details" }, `Có lỗi xảy ra, bạn có thể thử "Tải lại" hoặc "Thoát" dịch vụ.`),
+                    React.createElement("div", { className: "page-error-button-group" },
+                        React.createElement("button", { className: "t-button t-button-outline t-button-large", onClick: this.onClose }, "Tho\u00E1t"),
+                        React.createElement("button", { className: "t-button t-button-solid t-button-large", onClick: this.onReload }, "T\u1EA3i l\u1EA1i")))));
+        }
+<span class="cstat-no" title="statement not covered" >        return this.props.children;</span>
+    }
+}
+<span class="cstat-no" title="statement not covered" >exports.ErrorBoundary = ErrorBoundary;</span>
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Thu Feb 17 2022 10:04:59 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

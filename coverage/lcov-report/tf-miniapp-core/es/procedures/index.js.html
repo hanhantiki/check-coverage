@@ -1,0 +1,257 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for tf-miniapp-core/es/procedures/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">tf-miniapp-core/es/procedures</a> index.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/86</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/28</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/58</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "__esModule", { value: true });</span>
+<span class="cstat-no" title="statement not covered" >exports.OverlayProcedure = exports.LoadingProcedure = exports.ToastProcedure = exports.ModalProcedure = exports.MultiLevelSelectProcedure = exports.OptionsSelectProcedure = exports.DatePickerProcedure = exports.SnapshotProcedure = exports.AdsProcedure = exports.PreviewImageProcedure = exports.ClipboardProcedure = exports.InternalProcedure = exports.AddToHomeProcedure = exports.QRScannerProcedure = exports.AudioProcedure = exports.ContactProcedure = exports.AddressProcedure = exports.NativeStoreProcedure = exports.GeoProcedure = exports.FileNetworkProcedure = exports.WebSocketProcedure = exports.DeeplinkProcedure = exports.APIPermissionProcedure = exports.FileSystemProceduce = exports.ShareProcedure = exports.ImagePickerProcedure = exports.OptionMenuProcedure = exports.PermissionProcedure = void 0;</span>
+const PermissionProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./PermissionProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "PermissionProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return PermissionProcedure_1.PermissionProcedure; </span>} });</span>
+const OptionMenuProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./OptionMenuProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "OptionMenuProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return OptionMenuProcedure_1.OptionMenuProcedure; </span>} });</span>
+const ImagePickerProceduce_1 = <span class="cstat-no" title="statement not covered" >require("./ImagePickerProceduce");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "ImagePickerProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return ImagePickerProceduce_1.ImagePickerProcedure; </span>} });</span>
+const ShareProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./ShareProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "ShareProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return ShareProcedure_1.ShareProcedure; </span>} });</span>
+const FileSystemProceduce_1 = <span class="cstat-no" title="statement not covered" >require("./FileSystemProceduce");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "FileSystemProceduce", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return FileSystemProceduce_1.FileSystemProceduce; </span>} });</span>
+const APIPermissionProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./APIPermissionProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "APIPermissionProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return APIPermissionProcedure_1.APIPermissionProcedure; </span>} });</span>
+const DeeplinkProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./DeeplinkProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "DeeplinkProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return DeeplinkProcedure_1.DeeplinkProcedure; </span>} });</span>
+const WebSocketProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./WebSocketProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "WebSocketProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return WebSocketProcedure_1.WebSocketProcedure; </span>} });</span>
+const FileNetworkProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./FileNetworkProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "FileNetworkProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return FileNetworkProcedure_1.FileNetworkProcedure; </span>} });</span>
+const GeoProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./GeoProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "GeoProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return GeoProcedure_1.GeoProcedure; </span>} });</span>
+const NativeStoreProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./NativeStoreProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "NativeStoreProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return NativeStoreProcedure_1.NativeStoreProcedure; </span>} });</span>
+const AddressProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./AddressProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "AddressProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return AddressProcedure_1.AddressProcedure; </span>} });</span>
+const ContactProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./ContactProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "ContactProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return ContactProcedure_1.ContactProcedure; </span>} });</span>
+const AudioProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./AudioProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "AudioProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return AudioProcedure_1.AudioProcedure; </span>} });</span>
+const QRScannerProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./QRScannerProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "QRScannerProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return QRScannerProcedure_1.QRScannerProcedure; </span>} });</span>
+const AddToHomeProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./AddToHomeProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "AddToHomeProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return AddToHomeProcedure_1.AddToHomeProcedure; </span>} });</span>
+const InternalProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./InternalProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "InternalProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return InternalProcedure_1.InternalProcedure; </span>} });</span>
+const ClipboardProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./ClipboardProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "ClipboardProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return ClipboardProcedure_1.ClipboardProcedure; </span>} });</span>
+const PreviewImageProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./PreviewImageProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "PreviewImageProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return PreviewImageProcedure_1.PreviewImageProcedure; </span>} });</span>
+const AdsProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./AdsProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "AdsProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return AdsProcedure_1.AdsProcedure; </span>} });</span>
+const SnapshotProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./SnapshotProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "SnapshotProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return SnapshotProcedure_1.SnapshotProcedure; </span>} });</span>
+const DatePickerProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./DatePickerProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "DatePickerProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return DatePickerProcedure_1.DatePickerProcedure; </span>} });</span>
+const OptionsSelectProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./OptionsSelectProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "OptionsSelectProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return OptionsSelectProcedure_1.OptionsSelectProcedure; </span>} });</span>
+const MultiLevelSelectProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./MultiLevelSelectProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "MultiLevelSelectProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return MultiLevelSelectProcedure_1.MultiLevelSelectProcedure; </span>} });</span>
+const ModalProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./ModalProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "ModalProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return ModalProcedure_1.ModalProcedure; </span>} });</span>
+const ToastProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./ToastProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "ToastProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return ToastProcedure_1.ToastProcedure; </span>} });</span>
+const LoadingProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./LoadingProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "LoadingProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return LoadingProcedure_1.LoadingProcedure; </span>} });</span>
+const OverlayProcedure_1 = <span class="cstat-no" title="statement not covered" >require("./OverlayProcedure");</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, "OverlayProcedure", { enumerable: true, get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return OverlayProcedure_1.OverlayProcedure; </span>} });</span>
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Thu Feb 17 2022 10:04:59 GMT+0700 (Indochina Time)
+            </div>
+        </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    
